@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../font/webfontkit-20201026-065337/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../font/webfontkit-20201026-065337/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'shrikhandregular', sans-serif;
+}
+
+
+p  {
+    font-family:: 'Roboto', sans-serif;
+}
