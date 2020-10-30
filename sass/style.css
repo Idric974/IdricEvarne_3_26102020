@@ -1,0 +1,129 @@
+/********** PARAMETRAGE DE LA PAGE ***********/
+/**Page***************************************/
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**Police********************************************/
+h1,
+h2,
+h3,
+h4 {
+  font-family: "shrikhandregular", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../font/webfontkit-20201026-065337/shrikhand-regular-webfont.woff2") format("woff2"), url("../font/webfontkit-20201026-065337/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/**Variable de Couleur**/
+.logo {
+  background-image: url("../image/logo/ohmyfood.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  margin: 5px 0px 0px 0px;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px #ccc;
+}
+
+.box__rechercher__palceholder,
+.box__texte,
+.box__bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.box__rechercher__texte h1,
+.box__rechercher__texte h2,
+.box__rechercher__palceholder p {
+  font-family: "Roboto", sans-serif;
+}
+
+.box__rechercher {
+  width: 100%;
+  height: 300px;
+  margin: 3px 0px 0px 0px;
+  background-color: #f6f6f6;
+}
+
+.box__rechercher__palceholder {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: #eaeaea;
+}
+
+div.box__rechercher__palceholder > input {
+  background-color: #eaeaea;
+  text-align: center;
+  font-weight: bolder;
+  border: none;
+}
+
+::placeholder {
+  color: black;
+  font-family: roboto;
+}
+
+.input.mainLoginInput > .placeholder {
+  font-family: fontawesome;
+}
+
+/*# sourceMappingURL=style.css.map */

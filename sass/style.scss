@@ -1,0 +1,93 @@
+@import "base/police.scss";
+@import "components/bouton.scss";
+@import "layouts/layouts.scss";
+@import "pages/pages.scss";
+@import "themes/themes.scss";
+@import "utils/%placeholders.scss";
+@import "utils/fonctions.scss";
+@import "utils/mixins.scss";
+@import "utils/variables.scss";
+@import "vendors/vendors.scss";
+
+
+.logo {
+    background-image: url("../image/logo/ohmyfood.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    margin: 5px 0px 0px 0px;
+    width:100%;
+    height: 60px;
+    cursor: pointer;
+    @include box-shadox; 
+   
+}
+
+
+.box__rechercher__palceholder,
+.box__texte,
+.box__bouton {
+    @include centrer-box; 
+    
+}
+
+.box__rechercher__texte h1,
+.box__rechercher__texte h2,
+.box__rechercher__palceholder p {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+
+
+.box__rechercher {
+    width: 100%;
+    height: 300px;
+    margin: 3px 0px 0px 0px ;
+    background-color:$gris-claire;
+ }
+
+
+
+
+
+
+.box__rechercher__palceholder {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    
+    width: 100%;
+    height: 60px;
+    background-color: $gris-fonce;
+    
+    
+}
+
+
+
+
+
+
+
+div.box__rechercher__palceholder> input {
+    background-color: $gris-fonce;
+    text-align: center;
+    font-weight: bolder;
+    border: none;
+    
+
+    
+}
+
+
+::placeholder  {
+    color:black;
+    font-family: roboto;
+    }
+
+
+.input.mainLoginInput> .placeholder {
+    font-family: fontawesome;
+}

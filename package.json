@@ -1,0 +1,21 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./sass/style.css",
+    "prefix": "postcss ./sass/style.css --use autoprefixer -d ./sass/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Idric974/IdricEvarne_3_26102020.git"
+  },
+  "author": "idric",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Idric974/IdricEvarne_3_26102020/issues"
+  },
+  "homepage": "https://github.com/Idric974/IdricEvarne_3_26102020#readme"
+}

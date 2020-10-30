@@ -1,0 +1,70 @@
+/********** PARAMETRAGE DE LA PAGE ***********/
+/**Page***************************************/
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/**Police********************************************/
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'shrikhandregular' , sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+  font-family: 'shrikhandregular';
+  src: url("../font/webfontkit-20201026-065337/shrikhand-regular-webfont.woff2") format("woff2"), url("../font/webfontkit-20201026-065337/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*# sourceMappingURL=setting.css.map */
