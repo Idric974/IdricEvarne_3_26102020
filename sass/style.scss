@@ -405,6 +405,8 @@ height       : auto;
 
 .carte__menu__box {
     @include carte__menu__box; 
+    overflow: hidden;
+    
 }
 
 
@@ -417,58 +419,51 @@ height       : auto;
     @include box-shadow-choix;
     margin-bottom: 10px;
     cursor: pointer;
-    overflow: hidden;
     
     
-
-
-        &:hover .carte__menu__box--iteme--check {
-            
-            transform: translateX(-106%);
-            transition-duration: 500ms;
-
-                .fa-check-circle {
-
-                   
-                    @keyframes fa-check-circle {
-                        animation: rotate 5s normal linear infinite;
-                        animation: rotate 5s normal linear infinite;
-                      }
-
-
-
-                      @keyframes i {
-                        0% {
-                          -webkit-transform: rotate3d(0, 0, 1, 0deg);
-                          transform: rotate3d(0, 0, 1, 0deg);
-                        }
-                        25% {
-                          -webkit-transform: rotate3d(0, 0, 1, 90deg);
-                          transform: rotate3d(0, 0, 1, 90deg);
-                        }
-                        50% {
-                          -webkit-transform: rotate3d(0, 0, 1, 180deg);
-                          transform: rotate3d(0, 0, 1, 180deg);
-                        }
-                        75% {
-                          -webkit-transform: rotate3d(0, 0, 1, 270deg);
-                          transform: rotate3d(0, 0, 1, 270deg);
-                        }
-                        100% {
-                          -webkit-transform: rotate3d(0, 0, 1, 360deg);
-                          transform: rotate3d(0, 0, 1, 360deg);
-                        }
-                      }
-                }
-
+    
+    
+    
+        &:hover .points {  
+        transform: translateX(-373%);
+        transition-duration: 900ms;
         }
 
-}
+
+        &:hover .carte__menu__box--iteme--prix {
+            transform: translateX(-125%);
+            transition-duration: 700ms;
+            }
+    
+
+        &:hover .carte__menu__box--iteme--check {
+            transform: translateX(-142%);
+            transition-duration: 500ms;
+                 
+                 @keyframes fa-check-circle {
+                    from{
+                        transform: rotate(0deg);
+                    }
+                    to{
+                        transform: rotate(360deg);
+                    }
+                }
+                 
+                .fa-check-circle {
+                    animation: fa-check-circle 0.5s linear;
+                }
+
+
+
+        }
 
 
 
         .carte__menu__box--iteme--texte {
-            width: 71%; 
+           
+            
+            z-index: 1;
+            min-width: 260px; 
                 & h3 {
                     padding-top: 10px;
                     padding-left: 10px;
@@ -477,22 +472,55 @@ height       : auto;
 
                 & p {
                     padding-left: 10px;
-                    padding-bottom: 10px;
+                    padding-bottom: 10px;        
                 }
+        }
 
+
+        .points {
+            min-width: 53px;
+            height: 20px;
+            top: 30px;
+            position: relative;
+            left: 110px;
+            font-weight: bolder;
+            z-index: 1;
+            background-color: $gris-claire;
+            
+            
+            
+
+                & p {
+                    font-weight: bolder;
+                    position: absolute;
+                    left: 5px;
+                    top: -8px;
+                    font-weight: bolder;
+                    font-size: 1.5rem;
+                    
+                    
+                }
 
         }
 
 
+
         .carte__menu__box--iteme--prix {
-            width: 16%;
+            min-width: 53px;
+            height: 20px;
+            top: 30px;
             position: relative;
+            left: -35px;
+            background-color: $gris-claire;
+            
+            z-index: 2;
             
 
                 & p {
                     position: absolute;
                     left: 20px;
-                    top: 35px;
+                    top: 3px;
+
                     font-weight: bolder;
                 }
 
@@ -501,50 +529,96 @@ height       : auto;
 
 
         .carte__menu__box--iteme--check {
-            width: 16%;
+            min-width: 60px;
             position: relative;
-            left: 60px;
+            left: 10px;
             background-color: $tertiaire;
             border-radius: 0px 10px 10px 0px;
-            
-            
-            
-
+            z-index: 3;
+           
             
                 & i {
                     position: absolute;
                     color: #fff;
-                    left: 17px;
+                    left: 20px;
                     top: 20px;
-                    font-size: 1.2rem;  
-                        
+                    font-size: 1.2rem;        
                 }
-
-            }
-
-        
-
-
-
-
-.box__menu__btn {
-    margin-top: 20px;
-    
-    display: flex;
-    justify-content: center;
-
-
-
-        .bouton__menu {
-            @include bouton;
-            @include couleur-btn;
-            padding-left: 30px;
-            padding-right: 30px;
 
         }
 
+        
+
 }
 
+
+
+
+
+.entrees_1,
+.plats_1,
+.dessert_1 {
+    animation: fadein 1s;
+}
+
+.entrees_1,
+.plats_1,
+.dessert_1 {
+    animation: fadein 2s;
+}
+
+.entrees_1,
+.plats_1,
+.dessert_1{
+    animation: fadein 3s;
+}
+
+
+.entrees_1,
+.plats_1,
+.dessert_1 {
+    animation: fadein 4s;
+}
+
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+
+
+    .box__menu__btn {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+
+
+            .bouton__menu {
+                @include bouton;
+                @include couleur-btn;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+    }
+
+
+
+
+
+    .entrees_1,
+    .pltas_1,
+    .desserts_1 {
+        transform: translateY(-40%);
+        transition-duration: 3000ms;
+        }
 
 
 
