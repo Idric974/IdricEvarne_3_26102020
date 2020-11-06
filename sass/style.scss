@@ -49,7 +49,7 @@ height       : auto;
 
 
 
-/**Section box Explorer*/
+/**Section box Explorer**********************************************/
 
 .section__box__explorer {
     width           : 100%;
@@ -140,7 +140,7 @@ height       : auto;
 
 }
 
-/**Section Box Fonctionnement*/
+/**Section Box Fonctionnement**********************************/
 
 .section__box__fonctionnement {              
     
@@ -215,7 +215,7 @@ height       : auto;
 }
 
 
-/**section__box__restaurant**/
+/**section__box__restaurant**********************************************/
 
 .section__box__restaurant {               
     width         : 100%;
@@ -327,7 +327,7 @@ height       : auto;
 
 
 
-/**section__box__footer**/
+/**section__box__footer******************************************************/
 
 .section__box__footer {               
     width           : 100%;
@@ -395,7 +395,7 @@ height       : auto;
 
 
 
-
+/*carte__menu***************************************************************/
 
 .carte__menu {
 @include carte__menu;
@@ -417,60 +417,113 @@ height       : auto;
     @include box-shadow-choix;
     margin-bottom: 10px;
     cursor: pointer;
+    overflow: hidden;
+    
     
 
 
+        &:hover .carte__menu__box--iteme--check {
+            
+            transform: translateX(-106%);
+            transition-duration: 500ms;
 
+                .fa-check-circle {
+
+                   
+                    @keyframes fa-check-circle {
+                        animation: rotate 5s normal linear infinite;
+                        animation: rotate 5s normal linear infinite;
+                      }
+
+
+
+                      @keyframes i {
+                        0% {
+                          -webkit-transform: rotate3d(0, 0, 1, 0deg);
+                          transform: rotate3d(0, 0, 1, 0deg);
+                        }
+                        25% {
+                          -webkit-transform: rotate3d(0, 0, 1, 90deg);
+                          transform: rotate3d(0, 0, 1, 90deg);
+                        }
+                        50% {
+                          -webkit-transform: rotate3d(0, 0, 1, 180deg);
+                          transform: rotate3d(0, 0, 1, 180deg);
+                        }
+                        75% {
+                          -webkit-transform: rotate3d(0, 0, 1, 270deg);
+                          transform: rotate3d(0, 0, 1, 270deg);
+                        }
+                        100% {
+                          -webkit-transform: rotate3d(0, 0, 1, 360deg);
+                          transform: rotate3d(0, 0, 1, 360deg);
+                        }
+                      }
+                }
+
+        }
 
 }
 
 
 
-.carte__menu__box--iteme--texte {
-    width: 71%; 
-        & h3 {
-            padding-top: 10px;
-            padding-left: 10px;
-            padding-bottom: 5px;
-        }
+        .carte__menu__box--iteme--texte {
+            width: 71%; 
+                & h3 {
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    padding-bottom: 5px;
+                }
 
-        & p {
-            padding-left: 10px;
-            padding-bottom: 10px;
-        }
-}
+                & p {
+                    padding-left: 10px;
+                    padding-bottom: 10px;
+                }
 
 
-.carte__menu__box--iteme--prix {
-    width: 16%;
-    position: relative;
-    
-
-        & p {
-            position: absolute;
-            left: 20px;
-            top: 35px;
-            font-weight: bolder;
         }
 
 
-}
+        .carte__menu__box--iteme--prix {
+            width: 16%;
+            position: relative;
+            
+
+                & p {
+                    position: absolute;
+                    left: 20px;
+                    top: 35px;
+                    font-weight: bolder;
+                }
 
 
-.carte__menu__box--iteme--check {
-    width: 16%;
-    position: relative;
-    background-color: $tertiaire;
-    border-radius: 0px 10px 10px 0px;
-    
-        & i {
-            position: absolute;
-            color: #fff;
-            left: 17px;
-            top: 20px;
-            font-size: 1.2rem;      
         }
-}
+
+
+        .carte__menu__box--iteme--check {
+            width: 16%;
+            position: relative;
+            left: 60px;
+            background-color: $tertiaire;
+            border-radius: 0px 10px 10px 0px;
+            
+            
+            
+
+            
+                & i {
+                    position: absolute;
+                    color: #fff;
+                    left: 17px;
+                    top: 20px;
+                    font-size: 1.2rem;  
+                        
+                }
+
+            }
+
+        
+
 
 
 
