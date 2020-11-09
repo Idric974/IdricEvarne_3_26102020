@@ -10,6 +10,17 @@
 @import "vendors/vendors.scss";
 
 
+/***Loader***************************/
+
+
+
+
+
+
+/***********************************/
+
+
+
 
 /**Section logo**/
 
@@ -31,7 +42,6 @@ height       : auto;
         margin-right       : auto;
         height             : 60px;
         cursor             : pointer;
-       
     }
 
 
@@ -405,7 +415,7 @@ height       : auto;
 
 .carte__menu__box {
     @include carte__menu__box; 
-    overflow: hidden;
+    
     
 }
 
@@ -419,178 +429,214 @@ height       : auto;
     @include box-shadow-choix;
     margin-bottom: 10px;
     cursor: pointer;
-    
-    
-    
-    
-    
-        &:hover .points {  
-        transform: translateX(-373%);
-        transition-duration: 900ms;
-        }
+    background-color: #fff;
+    position: relative;
+    animation: selection  0.2s ease-in-out;
+    overflow: hidden;
 
 
-        &:hover .carte__menu__box--iteme--prix {
-            transform: translateX(-125%);
-            transition-duration: 700ms;
+
+ 
+    
+
+
+
+
+    .carte__menu__box--iteme--texte {
+        min-width: 70%;
+        
+            & h3 {
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-bottom: 5px;
             }
-    
 
-        &:hover .carte__menu__box--iteme--check {
-            transform: translateX(-142%);
-            transition-duration: 500ms;
-                 
-                 @keyframes fa-check-circle {
-                    from{
-                        transform: rotate(0deg);
-                    }
-                    to{
-                        transform: rotate(360deg);
-                    }
-                }
-                 
-                .fa-check-circle {
-                    animation: fa-check-circle 0.5s linear;
-                }
+            & p {
+                padding-left: 10px;
+                padding-bottom: 10px;        
+            }
+    }
 
 
-
-        }
-
-
-
-        .carte__menu__box--iteme--texte {
-           
-            
-            z-index: 1;
-            min-width: 260px; 
-                & h3 {
-                    padding-top: 10px;
-                    padding-left: 10px;
-                    padding-bottom: 5px;
-                }
-
-                & p {
-                    padding-left: 10px;
-                    padding-bottom: 10px;        
-                }
-        }
+    .trans {
+        min-width: 30%;
+        display: flex;
+        
 
 
         .points {
-            min-width: 53px;
-            height: 20px;
-            top: 30px;
+            background-color: #fff;
+            min-width: 25%;
             position: relative;
-            left: 110px;
+            height: 20px;
+            top: 29px;
+            left: 102%;
+            font-size: 1.2rem;
             font-weight: bolder;
-            z-index: 1;
-            background-color: $gris-claire;
-            
-            
-            
-
-                & p {
-                    font-weight: bolder;
-                    position: absolute;
-                    left: 5px;
-                    top: -8px;
-                    font-weight: bolder;
-                    font-size: 1.5rem;
-                    
-                    
-                }
-
-        }
-
-
+            background-color: #fff;
+            padding-right: 80px;
+           
+            }
+           
 
         .carte__menu__box--iteme--prix {
-            min-width: 53px;
+            background-color: #fff;
+            min-width: 25%;
+            position: relative;
             height: 20px;
-            top: 30px;
-            position: relative;
-            left: -35px;
-            background-color: $gris-claire;
-            
-            z-index: 2;
-            
-
-                & p {
-                    position: absolute;
-                    left: 20px;
-                    top: 3px;
-
-                    font-weight: bolder;
-                }
-
-
+            top: 35px; 
+            left: 50%;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            animation: transi 0.70s ease-out;
+             
         }
 
 
-        .carte__menu__box--iteme--check {
-            min-width: 60px;
-            position: relative;
-            left: 10px;
-            background-color: $tertiaire;
+        .check {
+            background-color:$tertiaire;
+            min-width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 0px 10px 10px 0px;
-            z-index: 3;
-           
-            
-                & i {
-                    position: absolute;
-                    color: #fff;
-                    left: 20px;
-                    top: 20px;
-                    font-size: 1.2rem;        
-                }
-
+            color: #fff;
+            font-size: 1.2rem;
+            position: relative;
+            left: 52%;
+            animation: transi 0.70s ease-out;
         }
+
+
+
+    }    
+
+        
+}
+
+
+    
 
         
 
-}
 
 
 
-
-
+/*** Apparition **************/
 .entrees_1,
 .plats_1,
-.dessert_1 {
-    animation: fadein 1s;
+.desserts_1 {
+    animation: apparition 1.000s ease-out;
 }
 
-.entrees_1,
-.plats_1,
-.dessert_1 {
-    animation: fadein 2s;
+.entrees_2,
+.plats_2,
+.desserts_2 {
+    animation: apparition 0.90s ease-out;
 }
 
-.entrees_1,
-.plats_1,
-.dessert_1{
-    animation: fadein 3s;
-}
-
-
-.entrees_1,
-.plats_1,
-.dessert_1 {
-    animation: fadein 4s;
+.entrees_3,
+.plats_3,
+.desserts_3 {
+    animation: apparition 0.80s ease-out;
 }
 
 
+.entrees_4,
+.plats_4,
+.desserts_4 {
+    animation: apparition 0.06s ease-out;
+}
 
-@keyframes fadein {
+
+@keyframes apparition {
     from {
-        opacity:0;
+        opacity: 0;
+        transform: translateY(100px);
+
     }
+
     to {
-        opacity:1;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/*** Apparition **************/
+
+
+/**Translation *******************/
+.carte__menu__box--iteme:hover .points {
+    animation: petit_points 0.5s ease-in-out;
+    animation-fill-mode: both;
+    
+}    
+
+@keyframes petit_points {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-170%);
+        
     }
 }
 
+
+.carte__menu__box--iteme:hover .carte__menu__box--iteme--prix {
+    animation: prix 0.4s ease-in-out;
+    animation-fill-mode: both;
+}    
+
+@keyframes prix {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-730%);
+    }
+}
+
+
+.carte__menu__box--iteme:hover .check{
+    animation: coche 0.3s ease-in-out;
+    animation-fill-mode: both;
+}    
+
+@keyframes coche {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-197%);
+    }
+}
+
+
+
+.carte__menu__box--iteme:hover .fa-check-circle{
+    animation: rotation_1 0.8s ease-in-out;
+    animation-fill-mode: both;
+}   
+
+
+@keyframes rotation_1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+ 
 
 
 
@@ -613,12 +659,8 @@ height       : auto;
 
 
 
-    .entrees_1,
-    .pltas_1,
-    .desserts_1 {
-        transform: translateY(-40%);
-        transition-duration: 3000ms;
-        }
+
+
 
 
 
