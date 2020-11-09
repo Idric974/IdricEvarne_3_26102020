@@ -511,7 +511,7 @@ button:focus {
   position: relative;
   height: 20px;
   top: 35px;
-  left: 50%;
+  left: -40%;
   font-size: 1.5rem;
   font-weight: bolder;
   animation: transi 0.7s ease-out;
@@ -594,7 +594,7 @@ button:focus {
   }
   to {
     opacity: 1;
-    transform: translateX(-730%);
+    transform: translateX(-350%);
   }
 }
 .carte__menu__box--iteme:hover .check {

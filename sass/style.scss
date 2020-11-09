@@ -485,7 +485,7 @@ height       : auto;
             position: relative;
             height: 20px;
             top: 35px; 
-            left: 50%;
+            left: -40%;
             font-size: 1.5rem;
             font-weight: bolder;
             animation: transi 0.70s ease-out;
@@ -598,7 +598,7 @@ height       : auto;
 
     to {
         opacity: 1;
-        transform: translateX(-730%);
+        transform: translateX(-350%);
     }
 }
 
