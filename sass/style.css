@@ -324,7 +324,7 @@ button:focus {
   font-weight: lighter;
   position: absolute;
   top: 190px;
-  left: 300px;
+  left: 80%;
   color: black;
 }
 .section__box__restaurant .box__restaurant_carte .nouveau {
@@ -339,7 +339,7 @@ button:focus {
   padding-top: 5px;
   position: absolute;
   top: 10px;
-  left: 260px;
+  left: 70%;
 }
 
 /**section__box__footer******************************************************/
@@ -569,7 +569,7 @@ button:focus {
 /**Translation *******************/
 .carte__menu__box--iteme:hover .points {
   animation: petit_points 0.5s ease-in-out;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 
 @keyframes petit_points {
@@ -584,7 +584,7 @@ button:focus {
 }
 .carte__menu__box--iteme:hover .carte__menu__box--iteme--prix {
   animation: prix 0.4s ease-in-out;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 
 @keyframes prix {
@@ -609,7 +609,7 @@ button:focus {
   }
   to {
     opacity: 1;
-    transform: translateX(-197%);
+    transform: translateX(-188%);
   }
 }
 .carte__menu__box--iteme:hover .fa-check-circle {
