@@ -11,9 +11,7 @@
 
 
 /***Loader***************************/
-header {
-    position: relative;
-}
+
 
 
 .img_header {
@@ -42,6 +40,7 @@ height       : auto;
 
 
 
+
     .logo {
         background-image   : url("../image/logo/ohmyfood@2x.svg");
         background-repeat  : no-repeat;
@@ -52,6 +51,7 @@ height       : auto;
         margin-right       : auto;
         height             : 60px;
         cursor             : pointer;
+        
     }
 
 
@@ -64,7 +64,7 @@ height       : auto;
 
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 630px) {
     .img_header {
         display: block;
         background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -73,16 +73,20 @@ height       : auto;
         background-position: center;
         }
 
-    .nav__logo .logo {
-        position:absolute;
-        z-index: 1;
-        top: -10px;
-        left: -50px;
-        width: 800px;
-        height: 200px;
+  
+    .nav__logo {
+        width: 100%;
+        position: absolute;
+        top: -20px;
+        left:-600px;
         
 
+     
+
     }    
+       
+ 
+
 
 }
 
@@ -193,7 +197,7 @@ height       : auto;
 
 
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 630px) {
 
     .tablette_pc_1 {
         display:flex;
@@ -324,7 +328,7 @@ height       : auto;
 
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 630px) {
 
     .box__fonctionnement__item .box__fonctionnement__item__num {     
         width           : 25px;
@@ -450,7 +454,7 @@ height       : auto;
 }
 
  
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 630px) {
 
     .box__restaurant__texte h2 {
         margin-left: 0px;
@@ -540,7 +544,7 @@ height       : auto;
         
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 630px) {
 
     .section__box__footer {
         display: flex;
@@ -592,12 +596,19 @@ height       : auto;
 }
 
 
+.nav__image--la_note_enchantee {
+    background-image: url(../image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    @include bg-img-menu;
+    
+}
+
+
 
 /*carte__menu***************************************************************/
 
 .carte__menu {
 @include carte__menu;
-
+margin-top: -30px; 
 }
 
 
@@ -713,15 +724,13 @@ height       : auto;
         position:absolute;
         left: 50%;
         transform: translate(-50%);
-        z-index: 1;
+        
         top: -10px;      
         width: 60%;
         height: 250px;
     }
 
-    .carte__menu {
-        
-        z-index: 1;
+    .carte__menu {      
         padding-top: 60px;
         position: relative;
        
@@ -730,14 +739,41 @@ height       : auto;
             margin-bottom:100px; 
             display: flex;
             justify-content: center;
-            border: solid red 1px;
             text-align: center;
+
+
+            & .fa-heart {          
+                    position: absolute;
+                    left: 60%;
+                    top: 20px;
+                    font-size: 2.0rem;           
+            }
+
+
+            & .far:hover {
+                font-size: 1.3;
+                color: #9c47fc;
+                display: block;
+                background: -webkit-linear-gradient($primaire, $secondaire );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bolder;
+                }
+
         }
 
 
-
+       .box__menu__btn .bouton__menu  {
+            font-size    : 2.0rem;
+            padding      : 15px 20px 15px 20px; 
+                  
+        }
 
     } 
+
+
+
+
 
 
 
@@ -748,6 +784,7 @@ height       : auto;
 
 
     
+
 }
         
 
