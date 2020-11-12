@@ -90,9 +90,36 @@ button:focus {
   outline: none;
 }
 
+@media screen and (min-width: 991px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
 /**Variable de Couleur**/
 /***Loader***************************/
+header {
+  position: relative;
+}
+
+.img_header {
+  display: none;
+}
+
 /***********************************/
+/**HEADER**************/
+/**Image header Tablette et PC ***/
 /**Section logo**/
 .nav__logo {
   box-shadow: 0px 2px 10px 0px #8a8989;
@@ -101,7 +128,7 @@ button:focus {
   height: auto;
 }
 .nav__logo .logo {
-  background-image: url("../image/logo/ohmyfood.png");
+  background-image: url("../image/logo/ohmyfood@2x.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
@@ -118,6 +145,24 @@ button:focus {
   cursor: pointer;
 }
 
+@media screen and (min-width: 991px) {
+  .img_header {
+    display: block;
+    background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    width: 100%;
+    height: 500px;
+    background-position: center;
+  }
+
+  .nav__logo .logo {
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    left: -50px;
+    width: 800px;
+    height: 200px;
+  }
+}
 /**Section box Explorer**********************************************/
 .section__box__explorer {
   width: 100%;
@@ -127,6 +172,16 @@ button:focus {
   flex-direction: column;
   align-items: center;
   padding-bottom: 40px;
+}
+.section__box__explorer:hover .fa-map-marker-alt {
+  display: none;
+}
+.section__box__explorer .fa-map-marker-alt {
+  position: absolute;
+  display: block;
+  top: 75px;
+  left: 100px;
+  z-index: 1;
 }
 .section__box__explorer .box__explorer__palceholder {
   width: 100%;
@@ -151,11 +206,8 @@ button:focus {
   font-weight: bolder;
   border: none;
   font-family: "Roboto", sans-serif;
-}
-.section__box__explorer .box__explorer__palceholder .fa-map-marker-alt {
-  position: absolute;
-  left: 120px;
-  top: 10px;
+  font-size: 1rem;
+  font-weight: lighter;
 }
 .section__box__explorer .box__explorer__texte {
   width: 100%;
@@ -188,6 +240,53 @@ button:focus {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
+@media screen and (min-width: 991px) {
+  .tablette_pc_1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .section__box__explorer,
+.section__box__fonctionnement {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .section__box__fonctionnement h2 {
+    margin-left: 45px;
+  }
+
+  .section__box__explorer .box__explorer__palceholder {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 30%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  .section__box__explorer .box__explorer__palceholder .explorer {
+    background-color: #fff;
+    padding-top: 10px;
+  }
+
+  input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  input[type=text] {
+    font-size: 3.5rem;
+  }
+
+  .section__box__explorer .fa-map-marker-alt {
+    top: 80px;
+    left: 800px;
+    font-size: 1.3rem;
+  }
+}
 /**Section Box Fonctionnement**********************************/
 .section__box__fonctionnement {
   width: 100%;
@@ -243,6 +342,22 @@ button:focus {
   font-weight: bolder;
 }
 
+@media screen and (min-width: 991px) {
+  .box__fonctionnement__item .box__fonctionnement__item__num {
+    width: 25px;
+    height: 22px;
+    margin-left: -10px;
+    margin-right: 20px;
+    padding: 1px 0px 0px 0px;
+  }
+
+  .fa-mobile-alt,
+.fa-list-ul,
+.fa-store {
+    font-size: 1.2rem;
+    padding-top: 4px;
+  }
+}
 /**section__box__restaurant**********************************************/
 .section__box__restaurant {
   width: 100%;
@@ -342,6 +457,35 @@ button:focus {
   left: 70%;
 }
 
+@media screen and (min-width: 991px) {
+  .box__restaurant__texte h2 {
+    margin-left: 0px;
+  }
+
+  .tablette_pc_3 {
+    display: flex;
+    width: 100%;
+  }
+  .tablette_pc_3 .box__restaurant_carte {
+    width: 49%;
+  }
+
+  .fa-heart {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    position: absolute;
+    top: 190px;
+    left: 120%;
+    color: black;
+  }
+
+  .nouveau {
+    position: absolute;
+    top: 50px;
+    left: 20000%;
+    background-color: red;
+  }
+}
 /**section__box__footer******************************************************/
 .section__box__footer {
   width: 100%;
@@ -379,6 +523,28 @@ button:focus {
   margin-right: 6px;
 }
 
+@media screen and (min-width: 991px) {
+  .section__box__footer {
+    display: flex;
+    justify-content: center;
+  }
+  .section__box__footer h2 {
+    font-size: 1.7rem;
+  }
+  .section__box__footer p {
+    font-size: 1.2rem;
+  }
+  .section__box__footer .box__footer__item__1::before,
+.section__box__footer .box__footer__item__2::before {
+    font-size: 1rem;
+  }
+
+  .box__footer {
+    width: 60%;
+    justify-content: space-between;
+    display: flex;
+  }
+}
 /***********************Page menu **********************/
 .nav__image {
   background-image: url(../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
@@ -530,6 +696,46 @@ button:focus {
   animation: transi 0.7s ease-out;
 }
 
+@media screen and (min-width: 630px) {
+  .tablette_pc_carte {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__image--La_palette_du_goût {
+    width: 100%;
+    height: 600px;
+    background-position: center;
+  }
+
+  .nav__logo .logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    top: -10px;
+    width: 60%;
+    height: 250px;
+  }
+
+  .carte__menu {
+    z-index: 1;
+    padding-top: 60px;
+    position: relative;
+  }
+  .carte__menu .carte__menu--titre {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    border: solid red 1px;
+    text-align: center;
+  }
+
+  .footer__menu {
+    position: fixed;
+    bottom: 0;
+  }
+}
 /*** Apparition **************/
 .entrees_1,
 .plats_1,

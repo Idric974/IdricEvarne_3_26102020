@@ -96,3 +96,23 @@ button:focus {
     outline: none;
 }
 
+
+@media screen and (min-width: 991px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1.0rem;
+    }
+
+}

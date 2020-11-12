@@ -11,13 +11,23 @@
 
 
 /***Loader***************************/
+header {
+    position: relative;
+}
 
 
-
-
+.img_header {
+    display: none;
+}
 
 
 /***********************************/
+
+
+
+/**HEADER**************/
+
+/**Image header Tablette et PC ***/
 
 
 
@@ -33,7 +43,7 @@ height       : auto;
 
 
     .logo {
-        background-image   : url("../image/logo/ohmyfood.png");
+        background-image   : url("../image/logo/ohmyfood@2x.svg");
         background-repeat  : no-repeat;
         background-position: center;
         background-size    : 50%;
@@ -54,10 +64,27 @@ height       : auto;
 
 }
 
+@media screen and (min-width: 991px) {
+    .img_header {
+        display: block;
+        background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        width: 100%;
+        height: 500px;
+        background-position: center;
+        }
 
+    .nav__logo .logo {
+        position:absolute;
+        z-index: 1;
+        top: -10px;
+        left: -50px;
+        width: 800px;
+        height: 200px;
+        
 
+    }    
 
-
+}
 
 /**Section box Explorer**********************************************/
 
@@ -68,9 +95,20 @@ height       : auto;
     display         : flex;
     flex-direction  : column;
     align-items     : center;
-    padding-bottom  : 40px;  
-    
+    padding-bottom  : 40px;
 
+    &:hover .fa-map-marker-alt {
+        display: none;
+    }
+
+
+    .fa-map-marker-alt {
+        position: absolute;
+        display: block;
+        top: 75px;
+        left: 100px;
+        z-index: 1;
+    }
 
 
     .box__explorer__palceholder {
@@ -80,7 +118,8 @@ height       : auto;
         justify-content : center;
         height          : 40px;
         position: relative;
-        
+         
+
 
             .explorer {
                 align-items     : center;
@@ -89,29 +128,29 @@ height       : auto;
                 display         : flex;
                 flex-direction  : column;
                 text-align      : center;  
+                             
             }
 
 
             input::placeholder {
-                color:black;
+                color:black; 
+                              
             }
 
 
             input.explorer {
                 font-weight: bolder;
                 border     : none;  
-                font-family: 'Roboto', sans-serif;
+                font-family: 'Roboto', sans-serif; 
+                font-size: 1.0rem; 
+                font-weight: lighter;
+                
             }
 
-            .fa-map-marker-alt {
-                position: absolute;
-                left    : 120px;
-                top     : 10px;
-            }
 
     }
 
-
+ 
 
     .box__explorer__texte {
         width        : 100%;
@@ -125,6 +164,9 @@ height       : auto;
             margin-left : auto;
             margin-right: auto;
             margin-bottom: 10px;
+
+
+
         }
 
         & h2 {
@@ -140,13 +182,75 @@ height       : auto;
 
     .box__explorer__btn {
         
-
         .bouton__1 {
             @include bouton;
             @include couleur-btn;
             
         }
     }
+
+}
+
+
+
+@media screen and (min-width: 991px) {
+
+    .tablette_pc_1 {
+        display:flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .section__box__explorer,
+    .section__box__fonctionnement {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+
+    .section__box__fonctionnement h2 {
+        margin-left: 45px;
+    }
+
+
+    .section__box__explorer .box__explorer__palceholder {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 30%;
+        height: 80px;
+        border-radius: 10px;
+        background-color: #fff;
+
+            .explorer {
+                background-color: #fff;
+                padding-top: 10px;
+            }      
+    }
+
+    
+    input::placeholder {      
+        font-size: 1.5rem;     
+    }
+
+
+    input[type="text"]
+    {
+        font-size:3.5rem;
+    }
+
+
+    .section__box__explorer .fa-map-marker-alt {
+        top: 80px;
+        left: 800px;
+        font-size: 1.3rem;
+    }
+
+
+
 
 }
 
@@ -213,16 +317,34 @@ height       : auto;
         }
 
 
-
-
-
-
         .box__fonctionnement__item__p {
             font-weight: bolder;
            
         }
 
 }
+
+@media screen and (min-width: 991px) {
+
+    .box__fonctionnement__item .box__fonctionnement__item__num {     
+        width           : 25px;
+        height          : 22px;
+        margin-left     : -10px;
+        margin-right    : 20px;
+        padding         : 1px 0px 0px 0px ;
+        
+    }
+
+    .fa-mobile-alt,
+    .fa-list-ul,
+    .fa-store {
+        font-size: 1.2rem;
+        padding-top: 4px;
+               
+    }
+
+}
+
 
 
 /**section__box__restaurant**********************************************/
@@ -235,105 +357,140 @@ height       : auto;
     
     
 
-        .box__restaurant__texte {
-            margin-bottom: 20px; 
-            margin-left  : 20px;
-            
-        }    
+    .box__restaurant__texte {
+        margin-bottom: 20px; 
+        margin-left  : 20px;
+        
+    }    
 
 
-        .box__restaurant_carte {
-            display       : block;
-            width         : 90%;
-            height        : auto;
-            margin-left   : auto;
-            margin-right  : auto;
-            border-radius : 10px;
-            padding-bottom: 15px;
-            @include box-shadow-choix;
-            margin-bottom : 20px;
-            position      : relative;
-            cursor        : pointer;
+    .box__restaurant_carte {
+        display       : block;
+        width         : 90%;
+        height        : auto;
+        margin-left   : auto;
+        margin-right  : auto;
+        border-radius : 10px;
+        padding-bottom: 15px;
+        @include box-shadow-choix;
+        margin-bottom : 20px;
+        position      : relative;
+        cursor        : pointer;
 
 
-                .box__restaurant__image_1 {
-                    background-image   : url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-                    @include bg-img;
+            .box__restaurant__image_1 {
+                background-image   : url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+                @include bg-img;
+            }
+
+
+            .box__restaurant__image_2 {
+                background-image   : url(../image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+                @include bg-img;
+            }
+
+
+            .box__restaurant__image_3 {
+                background-image   : url(../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+                @include bg-img;
+            }
+
+
+            .box__restaurant__image_4 {
+                background-image   : url(../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+                @include bg-img;
+            }
+
+
+            h3, p {
+                margin-left: 10px;
+            }
+
+
+
+            .far:hover {
+                font-size: 1.3;
+                color: #9c47fc;
+                display: block;
+                background: -webkit-linear-gradient($primaire, $secondaire );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bolder;
+                }
+        
+
+            .fa-heart {
+                font-size  : 1.3rem;
+                font-weight: lighter;
+                position   : absolute;
+                top        : 190px;
+                left       : 80%;
+                color: black;
+
                 }
 
 
-                .box__restaurant__image_2 {
-                    background-image   : url(../image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-                    @include bg-img;
-                }
-
-
-                .box__restaurant__image_3 {
-                    background-image   : url(../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-                    @include bg-img;
-                }
-
-
-                .box__restaurant__image_4 {
-                    background-image   : url(../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-                    @include bg-img;
-                }
-
-
-                h3, p {
-                    margin-left: 10px;
-                }
-
-
-
-                .far:hover {
-                    font-size: 1.3;
-                    color: #9c47fc;
-                    display: block;
-                    background: -webkit-linear-gradient($primaire, $secondaire );
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    font-weight: bolder;
-                    }
-               
-
-                    
+            .nouveau {
+                width: 70px;
+                height: 20px;
+                background-color: $tertiaire;
+                text-align: center;
+                font-size: 0.8rem;
+                @include tertiaire-fonce;
+                border-radius: 2px 2px 2px 2px;
+                padding-top: 5px;
+                position: absolute;
+                top: 10px;
+                left: 70%;
+            }
                 
-
-
-                .fa-heart {
-                    font-size  : 1.3rem;
-                    font-weight: lighter;
-                    position   : absolute;
-                    top        : 190px;
-                    left       : 80%;
-                    color: black;
-
-                   }
-
-
-                   .nouveau {
-                       width: 70px;
-                       height: 20px;
-                       background-color: $tertiaire;
-                       text-align: center;
-                       font-size: 0.8rem;
-                       @include tertiaire-fonce;
-                       border-radius: 2px 2px 2px 2px;
-                       padding-top: 5px;
-                       position: absolute;
-                       top: 10px;
-                       left: 70%;
-                       
-
-                   }
+                
+    }
                     
-                    
-                }
-                    
-        }
+}
 
-            
+ 
+@media screen and (min-width: 991px) {
+
+    .box__restaurant__texte h2 {
+        margin-left: 0px;
+    }
+
+    .tablette_pc_3 {
+
+        display: flex;
+        width: 100%;
+        
+            .box__restaurant_carte {
+                width: 49%;
+            }
+    
+    }   
+
+    .fa-heart {
+        font-size  : 1.3rem;
+        font-weight: lighter;
+        position   : absolute;
+        top        : 190px;
+        left       : 120%;
+        color: black;
+
+    }
+
+
+    .nouveau {
+        
+    position: absolute;
+    top: 50px;
+    left: 20000%;
+    background-color: red;
+        
+        
+    }
+    
+}        
+
+
 
 
 
@@ -382,6 +539,37 @@ height       : auto;
 
         
 }
+
+@media screen and (min-width: 991px) {
+
+    .section__box__footer {
+        display: flex;
+        justify-content: center; 
+    
+        h2 {
+                font-size: 1.7rem;
+            }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .box__footer__item__1::before,
+        .box__footer__item__2::before {
+            font-size   : 1.0rem;
+        } 
+
+    }
+
+
+    .box__footer {
+        width: 60%;        
+        justify-content: space-between;
+        display: flex;     
+    }
+
+}
+
 
 
 /***********************Page menu **********************/
@@ -433,13 +621,6 @@ height       : auto;
     position: relative;
     animation: selection  0.2s ease-in-out;
     overflow: hidden;
-
-
-
- 
-    
-
-
 
 
     .carte__menu__box--iteme--texte {
@@ -515,8 +696,59 @@ height       : auto;
 }
 
 
-    
+@media screen and (min-width: 630px) {
+    .tablette_pc_carte {
+        display:flex;
+        justify-content: center;
+    }
 
+
+    .nav__image--La_palette_du_goût {  
+        width: 100%;
+        height: 600px;
+        background-position: center;
+        }
+
+    .nav__logo .logo {
+        position:absolute;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1;
+        top: -10px;      
+        width: 60%;
+        height: 250px;
+    }
+
+    .carte__menu {
+        
+        z-index: 1;
+        padding-top: 60px;
+        position: relative;
+       
+
+        .carte__menu--titre {
+            margin-bottom:100px; 
+            display: flex;
+            justify-content: center;
+            border: solid red 1px;
+            text-align: center;
+        }
+
+
+
+
+    } 
+
+
+
+    .footer__menu {
+        position: fixed;
+        bottom: 0;
+    }
+
+
+    
+}
         
 
 
