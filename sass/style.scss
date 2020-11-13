@@ -12,65 +12,129 @@
 
 
 /**Loading Spinner***************/
-.loader {
-    animation: spin 1s  linear;
-    
-    border: solid 2vmin transparent;
-    border-radius: 50%;
-    border-right-color: $primaire;
-    border-top-color: $gris-fonce;
-    box-sizing: border-box;
-    height: 20vmin;
-    left: calc(50% - 10vmin);
-    position: fixed;
-    top: calc(50% - 10vmin);
-    width: 20vmin;
-    z-index: 1;
-    
-    &:before {
-      animation: spin 2s  linear;
-      
-      border: solid 2vmin transparent;
-      border-radius: 50%;
-      border-right-color: $tertiaire;
-      border-top-color: $secondaire;
-      box-sizing: border-box;
-      content: "";
-      height: 16vmin;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 16vmin;
-    }
+.ohmyfood h1{
+    color: #fff;
+    width: 100%;
+    font-family: 'shrikhandregular';
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
 
-    &:after {
-      animation: spin 3s  linear;
-      
-      border: solid 2vmin transparent;
-      border-radius: 50%;
-      border-right-color: $primaire;
-      border-top-color: $tertiaire;
-      box-sizing: border-box;
-      content: "";
-      height: 12vmin;
-      left: 2vmin;
-      position: absolute;
-      top: 2vmin;
-      width: 12vmin;
-    }
-  }
-  
-  @keyframes spin {
-    100% {transform: rotate(360deg);}
-    0%   { opacity: 100%; }
-    25% { opacity: 75%; }
-    50% { opacity: 50%; }
-    75% { opacity: 25%; }
-    100% { opacity: 0%; }
 
-  }
-  
+
+.box__loader__spinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: idric 5.0s ;
+    animation-fill-mode: forwards;
+    animation-delay: 4s; 
+}
  
+@keyframes idric{
+
+    0%  { opacity: 100%; }
+    10% { opacity: 95%; }
+    25% { opacity: 85%; }
+    30% { opacity: 80%; }
+    35% { opacity: 75%; }
+    40% { opacity: 70%; }
+    45% { opacity: 65%; }
+    50% { opacity: 60%; }
+    55% { opacity: 55%; }
+    60% { opacity: 50%; }
+    65% { opacity: 45%; }
+    70% { opacity: 40%; }
+    75% { opacity: 35%; }
+    80% { opacity: 30%; }
+    85% { opacity: 25%; }
+    90% { opacity: 20%; }
+    95% { opacity: 10%; }
+    100% { opacity: 0%; }
+}
+
+
+@keyframes idric {
+    from {
+        transform: translateX(0px);
+
+    }
+
+    to {      
+        transform: translateX(2000px);
+    }
+}
+
+
+
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    @include couleur-btn;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    
+  } 
+    .lds-ellipsis div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+
+
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
 
 
 /***header*****************************************************/
@@ -233,15 +297,15 @@ height       : auto;
         
         .bouton__1 {
             @include bouton;
-            @include couleur-btn;      
+            @include couleur-btn;
+             
+                &:hover {
+                    @include box-shadow-choix;
+                    padding      : 10px 17px 10px 17px; 
+                } 
         }
 
-        &:hover  {
-            
-            @include box-shadow-choix;
-            border-radius: 30px;
-                 
-        }
+
     }
 
 }
