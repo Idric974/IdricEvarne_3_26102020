@@ -38,7 +38,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 ul {
@@ -109,6 +109,70 @@ button:focus {
   }
 }
 /**Variable de Couleur**/
+/**Loading Spinner***************/
+.loader {
+  animation: spin 1s linear;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #9356DC;
+  border-top-color: #E2E2E2;
+  box-sizing: border-box;
+  height: 20vmin;
+  left: calc(50% - 10vmin);
+  position: fixed;
+  top: calc(50% - 10vmin);
+  width: 20vmin;
+  z-index: 1;
+}
+.loader:before {
+  animation: spin 2s linear;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #99E2D0;
+  border-top-color: #FF79DA;
+  box-sizing: border-box;
+  content: "";
+  height: 16vmin;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 16vmin;
+}
+.loader:after {
+  animation: spin 3s linear;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #9356DC;
+  border-top-color: #99E2D0;
+  box-sizing: border-box;
+  content: "";
+  height: 12vmin;
+  left: 2vmin;
+  position: absolute;
+  top: 2vmin;
+  width: 12vmin;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+  0% {
+    opacity: 100%;
+  }
+  25% {
+    opacity: 75%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 25%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
 /***header*****************************************************/
 .img_header {
   display: none;
@@ -241,6 +305,10 @@ button:focus {
   font-size: 0.9rem;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.section__box__explorer .box__explorer__btn:hover {
+  box-shadow: 3px 3px 10px 1px #b6b5b5;
+  border-radius: 30px;
 }
 
 @media screen and (min-width: 992px) {

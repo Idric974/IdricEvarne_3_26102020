@@ -9,7 +9,72 @@
 @import "utils/variables.scss";
 @import "vendors/vendors.scss";
 
+
+
+/**Loading Spinner***************/
+.loader {
+    animation: spin 1s  linear;
+    
+    border: solid 2vmin transparent;
+    border-radius: 50%;
+    border-right-color: $primaire;
+    border-top-color: $gris-fonce;
+    box-sizing: border-box;
+    height: 20vmin;
+    left: calc(50% - 10vmin);
+    position: fixed;
+    top: calc(50% - 10vmin);
+    width: 20vmin;
+    z-index: 1;
+    
+    &:before {
+      animation: spin 2s  linear;
+      
+      border: solid 2vmin transparent;
+      border-radius: 50%;
+      border-right-color: $tertiaire;
+      border-top-color: $secondaire;
+      box-sizing: border-box;
+      content: "";
+      height: 16vmin;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 16vmin;
+    }
+
+    &:after {
+      animation: spin 3s  linear;
+      
+      border: solid 2vmin transparent;
+      border-radius: 50%;
+      border-right-color: $primaire;
+      border-top-color: $tertiaire;
+      box-sizing: border-box;
+      content: "";
+      height: 12vmin;
+      left: 2vmin;
+      position: absolute;
+      top: 2vmin;
+      width: 12vmin;
+    }
+  }
+  
+  @keyframes spin {
+    100% {transform: rotate(360deg);}
+    0%   { opacity: 100%; }
+    25% { opacity: 75%; }
+    50% { opacity: 50%; }
+    75% { opacity: 25%; }
+    100% { opacity: 0%; }
+
+  }
+  
+ 
+
+
 /***header*****************************************************/
+
 
 .img_header {
     display: none;
@@ -168,8 +233,14 @@ height       : auto;
         
         .bouton__1 {
             @include bouton;
-            @include couleur-btn;
+            @include couleur-btn;      
+        }
+
+        &:hover  {
             
+            @include box-shadow-choix;
+            border-radius: 30px;
+                 
         }
     }
 
@@ -997,6 +1068,8 @@ margin-top: -30px;
     margin-top: 20px;
     display: flex;
     justify-content: center;
+
+
 
         .bouton__menu {
             @include bouton;

@@ -27,6 +27,12 @@
 
 }
 
+@mixin bouton_1 {
+    box-shadow: 3px 3px 10px 1px rgb(182, 181, 181);
+
+}
+
+
 
 @mixin bg-secondaire-claire ($colour:$primaire){
     background-color: lighten($colour, 35%);
@@ -37,6 +43,20 @@
                 color: $primaire;
         }
     }
+
+
+
+    @mixin couleur-btn {
+        background-image: linear-gradient(to bottom right, $secondaire, $primaire);
+    }
+
+    
+
+
+
+
+
+
 
 
     @mixin tertiaire-fonce ($colour:$tertiaire){
@@ -70,9 +90,7 @@
 }  
 
 
-@mixin couleur-btn {
-    background-image: linear-gradient(to bottom right, $secondaire, $primaire);
-}
+
 
 
 @mixin bouton  {
