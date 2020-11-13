@@ -115,7 +115,8 @@ button:focus {
   width: 100%;
   font-family: "shrikhandregular";
   font-size: 3rem;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+  overflow: hidden;
 }
 
 .box__loader__spinner {
@@ -130,7 +131,7 @@ button:focus {
   align-items: center;
   animation: idric 5s;
   animation-fill-mode: forwards;
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 @keyframes idric {
@@ -191,10 +192,10 @@ button:focus {
 }
 @keyframes idric {
   from {
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
   to {
-    transform: translateX(2000px);
+    transform: translateY(-1000px);
   }
 }
 .lds-ellipsis {
@@ -215,6 +216,7 @@ button:focus {
 }
 .lds-ellipsis div:hover {
   background-image: linear-gradient(to bottom, #FF79DA, #f6f6f6);
+  transition: all 1s linear 0s;
 }
 
 .lds-ellipsis div:nth-child(1) {
@@ -396,9 +398,11 @@ button:focus {
 }
 .section__box__explorer .box__explorer__btn .bouton__1:hover {
   background-image: linear-gradient(to bottom, #FF79DA, #f6f6f6);
+  transition: all 1s linear 0s;
 }
 .section__box__explorer .box__explorer__btn .bouton__1:hover {
   background-image: linear-gradient(to bottom, #FF79DA, #f6f6f6);
+  transition: all 1s linear 0s;
 }
 .section__box__explorer .box__explorer__btn .bouton__1:hover {
   box-shadow: 3px 3px 10px 1px #b6b5b5;
@@ -619,12 +623,17 @@ button:focus {
 }
 .section__box__restaurant .box__restaurant_carte .far:hover {
   font-size: 1.3rem;
-  color: #9c47fc;
   display: block;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
+  transition: all 1.5s linear 0s;
+}
+@media screen and (min-width: 630px) {
+  .section__box__restaurant .box__restaurant_carte .far:hover {
+    font-size: 2rem;
+  }
 }
 .section__box__restaurant .box__restaurant_carte .fa-heart {
   font-size: 1.3rem;
@@ -879,12 +888,17 @@ button:focus {
 }
 .carte__menu .carte__menu--titre .far:hover {
   font-size: 1.3rem;
-  color: #9c47fc;
   display: block;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
+  transition: all 2s linear 0s;
+}
+@media screen and (min-width: 630px) {
+  .carte__menu .carte__menu--titre .far:hover {
+    font-size: 1.5rem;
+  }
 }
 .carte__menu .carte__menu--titre .fa-heart {
   position: absolute;
@@ -1212,9 +1226,15 @@ button:focus {
 }
 .box__menu__btn .bouton__menu:hover {
   background-image: linear-gradient(to bottom, #FF79DA, #f6f6f6);
+  transition: all 1s linear 0s;
 }
 .box__menu__btn .bouton__menu:hover {
   background-image: linear-gradient(to bottom, #FF79DA, #f6f6f6);
+  transition: all 1s linear 0s;
+}
+.box__menu__btn .bouton__menu:hover {
+  box-shadow: 3px 3px 10px 1px #b6b5b5;
+  padding: 21px 41px 21px 41px;
 }
 @media screen and (min-width: 630px) {
   .box__menu__btn .bouton__menu {

@@ -51,7 +51,7 @@
     
             &:hover {
                 background-image: linear-gradient( to bottom, $secondaire, $gris-claire);
-            
+                transition: all 1.0s linear 0s;
             }
     }
 
@@ -82,6 +82,7 @@
     background-position: center;  
     border-radius      : 10px 10px 0px 0px;
     margin-bottom      : 10px; 
+    
     
 } 
 
@@ -148,12 +149,19 @@
 
                 & .far:hover {
                     font-size: 1.3rem;
-                    color: #9c47fc;
                     display: block;
                     background: -webkit-linear-gradient($primaire, $secondaire );
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-weight: bolder;
+                    transition: all 2.0s linear 0s;
+
+                        @media screen and (min-width: 630px) {
+                            font-size: 1.5rem;       
+                        }
+
+                    
+                    
                     }
 
 
