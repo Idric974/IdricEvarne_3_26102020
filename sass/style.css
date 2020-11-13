@@ -195,7 +195,7 @@ button:focus {
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-1000px);
+    transform: translateY(-1500px);
   }
 }
 .lds-ellipsis {
