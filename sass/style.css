@@ -38,6 +38,7 @@ h6 {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 ul {
@@ -108,14 +109,24 @@ button:focus {
   }
 }
 /**Variable de Couleur**/
-/***Loader***************************/
+/***header*****************************************************/
 .img_header {
   display: none;
 }
 
-/***********************************/
-/**HEADER**************/
-/**Image header Tablette et PC ***/
+@media screen and (min-width: 630px) {
+  .img_header {
+    background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 10px 1px #b6b5b5;
+    display: block;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+  }
+}
+
 /**Section logo**/
 .nav__logo {
   box-shadow: 0px 2px 10px 0px #8a8989;
@@ -134,29 +145,27 @@ button:focus {
   height: 60px;
   cursor: pointer;
 }
-.nav__logo .fa-arrow-left {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 630px) {
-  .img_header {
-    display: block;
-    background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    width: 100%;
-    height: 500px;
-    background-position: center;
-  }
-
-  .nav__logo {
-    width: 100%;
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .nav__logo .logo {
     position: absolute;
-    top: -20px;
-    left: -600px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
+    width: 80%;
+    height: 90px;
   }
 }
+@media screen and (min-width: 992px) {
+  .nav__logo .logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 20px;
+    width: 80%;
+    height: 140px;
+  }
+}
+
 /**Section box Explorer**********************************************/
 .section__box__explorer {
   width: 100%;
@@ -234,7 +243,7 @@ button:focus {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 992px) {
   .tablette_pc_1 {
     display: flex;
     align-items: center;
@@ -254,7 +263,7 @@ button:focus {
 
   .section__box__explorer .box__explorer__palceholder {
     position: absolute;
-    top: 50px;
+    top: 300px;
     left: 50%;
     transform: translate(-50%);
     width: 30%;
@@ -276,8 +285,15 @@ button:focus {
   }
 
   .section__box__explorer .fa-map-marker-alt {
-    top: 80px;
-    left: 800px;
+    top: 330px;
+    left: 39%;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .section__box__explorer .fa-map-marker-alt {
+    top: 40%;
+    left: 39%;
     font-size: 1.3rem;
   }
 }
@@ -287,7 +303,7 @@ button:focus {
   padding-top: 30px;
   padding-bottom: 40px;
 }
-.section__box__fonctionnement .boc__fonctionnent__texte {
+.section__box__fonctionnement .box__fonctionnent__texte {
   margin-bottom: 20px;
   margin-left: 20px;
 }
@@ -336,7 +352,7 @@ button:focus {
   font-weight: bolder;
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 991px) {
   .box__fonctionnement__item .box__fonctionnement__item__num {
     width: 25px;
     height: 22px;
@@ -381,40 +397,60 @@ button:focus {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 175px;
   border-radius: 10px 10px 0px 0px;
   margin-bottom: 10px;
+  width: 100%;
+  height: 175px;
+}
+@media screen and (min-width: 630px) {
+  .section__box__restaurant .box__restaurant_carte .box__restaurant__image_1 {
+    height: 300px;
+  }
 }
 .section__box__restaurant .box__restaurant_carte .box__restaurant__image_2 {
   background-image: url(../image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 175px;
   border-radius: 10px 10px 0px 0px;
   margin-bottom: 10px;
+  width: 100%;
+  height: 175px;
+}
+@media screen and (min-width: 630px) {
+  .section__box__restaurant .box__restaurant_carte .box__restaurant__image_2 {
+    height: 300px;
+  }
 }
 .section__box__restaurant .box__restaurant_carte .box__restaurant__image_3 {
   background-image: url(../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 175px;
   border-radius: 10px 10px 0px 0px;
   margin-bottom: 10px;
+  width: 100%;
+  height: 175px;
+}
+@media screen and (min-width: 630px) {
+  .section__box__restaurant .box__restaurant_carte .box__restaurant__image_3 {
+    height: 300px;
+  }
 }
 .section__box__restaurant .box__restaurant_carte .box__restaurant__image_4 {
   background-image: url(../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 175px;
   border-radius: 10px 10px 0px 0px;
   margin-bottom: 10px;
+  width: 100%;
+  height: 175px;
+}
+@media screen and (min-width: 630px) {
+  .section__box__restaurant .box__restaurant_carte .box__restaurant__image_4 {
+    height: 300px;
+  }
 }
 .section__box__restaurant .box__restaurant_carte h3, .section__box__restaurant .box__restaurant_carte p {
   margin-left: 10px;
@@ -436,6 +472,13 @@ button:focus {
   left: 80%;
   color: black;
 }
+@media screen and (min-width: 630px) {
+  .section__box__restaurant .box__restaurant_carte .fa-heart {
+    top: 320px;
+    left: 90%;
+    font-size: 2rem;
+  }
+}
 .section__box__restaurant .box__restaurant_carte .nouveau {
   width: 70px;
   height: 20px;
@@ -451,7 +494,7 @@ button:focus {
   left: 70%;
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 991px) {
   .box__restaurant__texte h2 {
     margin-left: 0px;
   }
@@ -462,22 +505,6 @@ button:focus {
   }
   .tablette_pc_3 .box__restaurant_carte {
     width: 49%;
-  }
-
-  .fa-heart {
-    font-size: 1.3rem;
-    font-weight: lighter;
-    position: absolute;
-    top: 190px;
-    left: 120%;
-    color: black;
-  }
-
-  .nouveau {
-    position: absolute;
-    top: 50px;
-    left: 20000%;
-    background-color: red;
   }
 }
 /**section__box__footer******************************************************/
@@ -534,12 +561,13 @@ button:focus {
   }
 
   .box__footer {
-    width: 60%;
+    width: 90%;
     justify-content: space-between;
     display: flex;
+    text-align: center;
   }
 }
-/***********************Page menu **********************/
+/**Page menu ***************************************************/
 .nav__image {
   background-image: url(../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-repeat: no-repeat;
@@ -548,6 +576,18 @@ button:focus {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 991px) {
+  .nav__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 400px;
+  }
 }
 
 .nav__image--La_palette_du_goût {
@@ -559,6 +599,18 @@ button:focus {
   height: 200px;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 991px) {
+  .nav__image--La_palette_du_goût {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 400px;
+  }
+}
 
 .nav__image--Le_delice_des_sens {
   background-image: url(../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
@@ -568,6 +620,18 @@ button:focus {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 991px) {
+  .nav__image--Le_delice_des_sens {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 400px;
+  }
 }
 
 .nav__image--la_note_enchantee {
@@ -579,8 +643,48 @@ button:focus {
   height: 200px;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 991px) {
+  .nav__image--la_note_enchantee {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 400px;
+  }
+}
 
-/*carte__menu***************************************************************/
+/**carte__menu***************************************************************/
+.fa-arrow-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .fa-arrow-left {
+    top: 40px;
+    left: 50px;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fa-arrow-left {
+    top: 80px;
+    left: 50px;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .tablette_pc_carte {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
 .carte__menu {
   background-color: #f6f6f6;
   width: 100%;
@@ -603,10 +707,41 @@ button:focus {
   padding-left: 20px;
   font-family: "shrikhandregular";
 }
+@media screen and (min-width: 630px) {
+  .carte__menu .carte__menu--titre h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+.carte__menu .carte__menu--titre .far:hover {
+  font-size: 1.3;
+  color: #9c47fc;
+  display: block;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
 .carte__menu .carte__menu--titre .fa-heart {
   position: absolute;
   left: 90%;
   top: 20px;
+}
+@media screen and (min-width: 991px) {
+  .carte__menu .carte__menu--titre .fa-heart {
+    left: 65%;
+    top: 40px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .carte__menu .carte__menu--titre .fa-heart {
+    left: 70%;
+    top: 40px;
+    font-size: 1.2rem;
+  }
 }
 
 .carte__menu__box {
@@ -634,6 +769,12 @@ button:focus {
   top: 22px;
   left: 4px;
 }
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .carte__menu__box {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 .carte__menu__box--iteme {
   width: 93%;
@@ -648,6 +789,11 @@ button:focus {
   position: relative;
   animation: selection 0.2s ease-in-out;
   overflow: hidden;
+}
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .carte__menu__box--iteme {
+    width: 235px;
+  }
 }
 .carte__menu__box--iteme .carte__menu__box--iteme--texte {
   min-width: 70%;
@@ -677,6 +823,11 @@ button:focus {
   background-color: #fff;
   padding-right: 80px;
 }
+@media screen and (min-width: 991px) {
+  .carte__menu__box--iteme .trans .points {
+    top: 35px;
+  }
+}
 .carte__menu__box--iteme .trans .carte__menu__box--iteme--prix {
   background-color: #fff;
   min-width: 25%;
@@ -687,6 +838,16 @@ button:focus {
   font-size: 1.5rem;
   font-weight: bolder;
   animation: transi 0.7s ease-out;
+}
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .carte__menu__box--iteme .trans .carte__menu__box--iteme--prix {
+    left: -80%;
+  }
+}
+@media screen and (min-width: 991px) {
+  .carte__menu__box--iteme .trans .carte__menu__box--iteme--prix {
+    top: 40px;
+  }
 }
 .carte__menu__box--iteme .trans .check {
   background-color: #99E2D0;
@@ -702,63 +863,7 @@ button:focus {
   animation: transi 0.7s ease-out;
 }
 
-@media screen and (min-width: 630px) {
-  .tablette_pc_carte {
-    display: flex;
-    justify-content: center;
-  }
-
-  .nav__image--La_palette_du_goût {
-    width: 100%;
-    height: 600px;
-    background-position: center;
-  }
-
-  .nav__logo .logo {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: -10px;
-    width: 60%;
-    height: 250px;
-  }
-
-  .carte__menu {
-    padding-top: 60px;
-    position: relative;
-  }
-  .carte__menu .carte__menu--titre {
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  .carte__menu .carte__menu--titre .fa-heart {
-    position: absolute;
-    left: 60%;
-    top: 20px;
-    font-size: 2rem;
-  }
-  .carte__menu .carte__menu--titre .far:hover {
-    font-size: 1.3;
-    color: #9c47fc;
-    display: block;
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bolder;
-  }
-  .carte__menu .box__menu__btn .bouton__menu {
-    font-size: 2rem;
-    padding: 15px 20px 15px 20px;
-  }
-
-  .footer__menu {
-    position: fixed;
-    bottom: 0;
-  }
-}
-/*** Apparition **************/
+/***Animation ************************************************************/
 .entrees_1,
 .plats_1,
 .desserts_1 {
@@ -810,6 +915,30 @@ button:focus {
     transform: translateX(-170%);
   }
 }
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  @keyframes petit_points {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-110%);
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  @keyframes petit_points {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-150%);
+    }
+  }
+}
 .carte__menu__box--iteme:hover .carte__menu__box--iteme--prix {
   animation: prix 0.4s ease-in-out;
   animation-fill-mode: forwards;
@@ -825,6 +954,30 @@ button:focus {
     transform: translateX(-350%);
   }
 }
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  @keyframes prix {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-300%);
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  @keyframes prix {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-250%);
+    }
+  }
+}
 .carte__menu__box--iteme:hover .check {
   animation: coche 0.3s ease-in-out;
   animation-fill-mode: both;
@@ -838,6 +991,30 @@ button:focus {
   to {
     opacity: 1;
     transform: translateX(-188%);
+  }
+}
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  @keyframes coche {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-235%);
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  @keyframes coche {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-180%);
+    }
   }
 }
 .carte__menu__box--iteme:hover .fa-check-circle {
@@ -870,6 +1047,12 @@ button:focus {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding-left: 30px;
   padding-right: 30px;
+}
+@media screen and (min-width: 630px) {
+  .box__menu__btn .bouton__menu {
+    padding: 20px 40px 20px 40px;
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

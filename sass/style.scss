@@ -9,23 +9,24 @@
 @import "utils/variables.scss";
 @import "vendors/vendors.scss";
 
-
-/***Loader***************************/
-
-
+/***header*****************************************************/
 
 .img_header {
     display: none;
 }
 
-
-/***********************************/
-
-
-
-/**HEADER**************/
-
-/**Image header Tablette et PC ***/
+.img_header {
+        @media screen and (min-width: 630px) { 
+            background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            @include box-shadow-choix;
+            display:block;
+            width: 100%;
+            height: 400px;
+            z-index: 1;
+        }
+}
 
 
 
@@ -39,8 +40,6 @@ margin-bottom: 3px;
 height       : auto;
 
 
-
-
     .logo {
         background-image   : url("../image/logo/ohmyfood@2x.svg");
         background-repeat  : no-repeat;
@@ -51,44 +50,33 @@ height       : auto;
         margin-right       : auto;
         height             : 60px;
         cursor             : pointer;
-        
-    }
 
 
-    .fa-arrow-left {
-        position: absolute;
-        top :20px;
-        left: 20px;
-        cursor: pointer;
-    }
+            @media screen and (min-width: 630px) and (max-width: 991px){ 
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 10px;
+                width: 80%;
+                height: 90px;  
+            }
 
-}
 
-@media screen and (min-width: 630px) {
-    .img_header {
-        display: block;
-        background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-        width: 100%;
-        height: 500px;
-        background-position: center;
-        }
-
-  
-    .nav__logo {
-        width: 100%;
-        position: absolute;
-        top: -20px;
-        left:-600px;
-        
-
+            @media screen and (min-width: 992px) { 
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 20px;
+                width: 80%;
+                height: 140px;                                         
+            }
      
-
-    }    
-       
- 
+    }
 
 
 }
+
+
 
 /**Section box Explorer**********************************************/
 
@@ -101,87 +89,79 @@ height       : auto;
     align-items     : center;
     padding-bottom  : 40px;
 
-    &:hover .fa-map-marker-alt {
-        display: none;
-    }
+        &:hover .fa-map-marker-alt {
+            display: none;
+        }
 
 
-    .fa-map-marker-alt {
-        position: absolute;
-        display: block;
-        top: 75px;
-        left: 100px;
-        z-index: 1;
-    }
+        .fa-map-marker-alt {
+            position: absolute;
+            display: block;
+            top: 75px;
+            left: 100px;
+            z-index: 1;
+        }
 
 
-    .box__explorer__palceholder {
-        width           : 100%;
-        background-color: $gris-fonce;
-        display         : flex;
-        justify-content : center;
-        height          : 40px;
-        position: relative;
-         
+        .box__explorer__palceholder {
+            width           : 100%;
+            background-color: $gris-fonce;
+            display         : flex;
+            justify-content : center;
+            height          : 40px;
+            position: relative;
+            
+
+                .explorer {
+                    align-items     : center;
+                    background-color: $gris-fonce;
+                    width           : 60%;
+                    display         : flex;
+                    flex-direction  : column;
+                    text-align      : center;                                  
+                }
 
 
-            .explorer {
-                align-items     : center;
-                background-color: $gris-fonce;
-                width           : 60%;
-                display         : flex;
-                flex-direction  : column;
-                text-align      : center;  
-                             
-            }
+                input::placeholder {
+                    color:black;                                 
+                }
 
 
-            input::placeholder {
-                color:black; 
-                              
-            }
+                input.explorer {
+                    font-weight: bolder;
+                    border     : none;  
+                    font-family: 'Roboto', sans-serif; 
+                    font-size: 1.0rem; 
+                    font-weight: lighter;                    
+                }
 
-
-            input.explorer {
-                font-weight: bolder;
-                border     : none;  
-                font-family: 'Roboto', sans-serif; 
-                font-size: 1.0rem; 
-                font-weight: lighter;
-                
-            }
-
-
-    }
+        }
 
  
 
-    .box__explorer__texte {
-        width        : 100%;
-        margin-top   : 50px;
-        margin-bottom: 30px;
-        text-align   : center;
-        
-
-        & h1 {
-            width       : 70%;
-            margin-left : auto;
-            margin-right: auto;
-            margin-bottom: 10px;
-
-
-
-        }
-
-        & h2 {
-            width      : 90%;
-            font-size  : 1.0rem;
-            font-weight: lighter;
-            margin-left: auto;
-            margin-right: auto;
+        .box__explorer__texte {
+            width        : 100%;
+            margin-top   : 50px;
+            margin-bottom: 30px;
+            text-align   : center;
             
+
+                & h1 {
+                    width       : 70%;
+                    margin-left : auto;
+                    margin-right: auto;
+                    margin-bottom: 10px;
+                }
+
+                & h2 {
+                    width      : 90%;
+                    font-size  : 1.0rem;
+                    font-weight: lighter;
+                    margin-left: auto;
+                    margin-right: auto;
+                    
+                }
         }
-    }
 
 
     .box__explorer__btn {
@@ -196,8 +176,7 @@ height       : auto;
 }
 
 
-
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 992px) {
 
     .tablette_pc_1 {
         display:flex;
@@ -221,7 +200,7 @@ height       : auto;
 
     .section__box__explorer .box__explorer__palceholder {
         position: absolute;
-        top: 50px;
+        top: 300px;
         left: 50%;
         transform: translate(-50%);
         width: 30%;
@@ -248,32 +227,37 @@ height       : auto;
 
 
     .section__box__explorer .fa-map-marker-alt {
-        top: 80px;
-        left: 800px;
+        top: 330px;
+        left: 39%;
         font-size: 1.3rem;
     }
 
 
+}
+
+
+@media screen and (min-width: 630px) and (max-width: 991px){ 
+    .section__box__explorer .fa-map-marker-alt {
+        top: 40%;
+        left: 39%;
+        font-size: 1.3rem;
+    }
 
 
 }
 
 /**Section Box Fonctionnement**********************************/
 
-.section__box__fonctionnement {              
-    
+.section__box__fonctionnement {                  
     width      : 100%;
     padding-top: 30px;
     padding-bottom: 40px;
     
 
-    .boc__fonctionnent__texte {
+    .box__fonctionnent__texte {
         margin-bottom: 20px; 
         margin-left  : 20px;
         }
-
-  
-
 }      
     
 
@@ -301,8 +285,7 @@ height       : auto;
         .fa-list-ul,
         .fa-store {
             margin-right: 20px;
-            color       : #7e7e7e;
-                   
+            color       : #7e7e7e;                   
         }
 
 
@@ -328,7 +311,7 @@ height       : auto;
 
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 991px) {
 
     .box__fonctionnement__item .box__fonctionnement__item__num {     
         width           : 25px;
@@ -358,13 +341,11 @@ height       : auto;
     padding-top   : 30px;
     padding-bottom: 40px;
     background-color: $gris-claire;
-    
-    
+       
 
     .box__restaurant__texte {
         margin-bottom: 20px; 
-        margin-left  : 20px;
-        
+        margin-left  : 20px;       
     }    
 
 
@@ -385,24 +366,48 @@ height       : auto;
             .box__restaurant__image_1 {
                 background-image   : url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
                 @include bg-img;
+                width              : 100%;
+                height             : 175px;
+
+                    @media screen and (min-width: 630px) {           
+                        height             : 300px;
+                    }
             }
 
 
             .box__restaurant__image_2 {
                 background-image   : url(../image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
                 @include bg-img;
+                width              : 100%;
+                height             : 175px;
+
+                    @media screen and (min-width: 630px) {           
+                        height             : 300px;
+                    }
             }
 
 
             .box__restaurant__image_3 {
                 background-image   : url(../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
                 @include bg-img;
+                width              : 100%;
+                height             : 175px;
+
+                    @media screen and (min-width: 630px) {           
+                        height             : 300px;
+                    }
             }
 
 
             .box__restaurant__image_4 {
                 background-image   : url(../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
                 @include bg-img;
+                width              : 100%;
+                height             : 175px;
+
+                    @media screen and (min-width: 630px) {           
+                        height             : 300px;
+                    }
             }
 
 
@@ -431,6 +436,12 @@ height       : auto;
                 left       : 80%;
                 color: black;
 
+                    @media screen and (min-width: 630px) {
+                        top: 320px; 
+                        left: 90%; 
+                        font-size: 2.0rem;       
+                    }
+
                 }
 
 
@@ -447,21 +458,19 @@ height       : auto;
                 top: 10px;
                 left: 70%;
             }
-                
-                
+                              
     }
                     
 }
 
  
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 991px) {
 
     .box__restaurant__texte h2 {
         margin-left: 0px;
     }
 
     .tablette_pc_3 {
-
         display: flex;
         width: 100%;
         
@@ -470,31 +479,8 @@ height       : auto;
             }
     
     }   
-
-    .fa-heart {
-        font-size  : 1.3rem;
-        font-weight: lighter;
-        position   : absolute;
-        top        : 190px;
-        left       : 120%;
-        color: black;
-
-    }
-
-
-    .nouveau {
-        
-    position: absolute;
-    top: 50px;
-    left: 20000%;
-    background-color: red;
-        
-        
-    }
     
 }        
-
-
 
 
 
@@ -567,25 +553,39 @@ height       : auto;
 
 
     .box__footer {
-        width: 60%;        
+        width: 90%;        
         justify-content: space-between;
-        display: flex;     
+        display: flex;
+        text-align: center;     
     }
 
 }
 
 
 
-/***********************Page menu **********************/
+/**Page menu ***************************************************/
 
 .nav__image {
     background-image: url(../image/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     @include bg-img-menu;
+
+        @media screen and (min-width: 991px) { 
+            @include bg-img-menu;
+            width              : 100%;
+            height             : 400px;
+        }
+
 }
 
 .nav__image--La_palette_du_goût {
     background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     @include bg-img-menu;
+
+        @media screen and (min-width: 991px) { 
+            @include bg-img-menu;
+            width              : 100%;
+            height             : 400px;
+        }
     
 }
 
@@ -593,6 +593,11 @@ height       : auto;
     background-image: url(../image/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     @include bg-img-menu;
     
+        @media screen and (min-width: 991px) { 
+            @include bg-img-menu;
+            width              : 100%;
+            height             : 400px;
+        }
 }
 
 
@@ -600,11 +605,45 @@ height       : auto;
     background-image: url(../image/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
     @include bg-img-menu;
     
+        @media screen and (min-width: 991px) { 
+            @include bg-img-menu;
+            width              : 100%;
+            height             : 400px;
+        }
 }
 
 
 
-/*carte__menu***************************************************************/
+/**carte__menu***************************************************************/
+
+.fa-arrow-left {
+    position:absolute;
+    top: 20px;
+    left: 20px;
+
+
+        @media screen and (min-width: 630px) and (max-width: 991px){ 
+            top: 40px;
+            left: 50px;
+            font-size: 2.5rem;
+        }
+
+        @media screen and (min-width: 992px) { 
+            top: 80px;
+            left: 50px;
+            font-size: 2.5rem;
+        }
+
+}
+
+.tablette_pc_carte {
+
+        @media screen and (min-width: 630px) { 
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+}
 
 .carte__menu {
 @include carte__menu;
@@ -614,8 +653,13 @@ margin-top: -30px;
 
 .carte__menu__box {
     @include carte__menu__box; 
-    
-    
+
+        @media screen and (min-width: 630px) and (max-width: 991px){ 
+            padding-left: 10px;
+            padding-right: 10px;
+
+    }
+        
 }
 
 
@@ -633,165 +677,97 @@ margin-top: -30px;
     animation: selection  0.2s ease-in-out;
     overflow: hidden;
 
+        @media screen and (min-width: 630px) and (max-width: 991px){ 
+            width: 235px;
 
-    .carte__menu__box--iteme--texte {
-        min-width: 70%;
-        
-            & h3 {
-                padding-top: 10px;
-                padding-left: 10px;
-                padding-bottom: 5px;
-            }
-
-            & p {
-                padding-left: 10px;
-                padding-bottom: 10px;        
-            }
-    }
-
-
-    .trans {
-        min-width: 30%;
-        display: flex;
-        
-
-
-        .points {
-            background-color: #fff;
-            min-width: 25%;
-            position: relative;
-            height: 20px;
-            top: 29px;
-            left: 102%;
-            font-size: 1.2rem;
-            font-weight: bolder;
-            background-color: #fff;
-            padding-right: 80px;
-           
-            }
-           
-
-        .carte__menu__box--iteme--prix {
-            background-color: #fff;
-            min-width: 25%;
-            position: relative;
-            height: 20px;
-            top: 35px; 
-            left: -40%;
-            font-size: 1.5rem;
-            font-weight: bolder;
-            animation: transi 0.70s ease-out;
-             
-        }
-
-
-        .check {
-            background-color:$tertiaire;
-            min-width: 80%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 0px 10px 10px 0px;
-            color: #fff;
-            font-size: 1.2rem;
-            position: relative;
-            left: 52%;
-            animation: transi 0.70s ease-out;
         }
 
 
 
-    }    
-
-        
-}
-
-
-@media screen and (min-width: 630px) {
-    .tablette_pc_carte {
-        display:flex;
-        justify-content: center;
-    }
-
-
-    .nav__image--La_palette_du_goût {  
-        width: 100%;
-        height: 600px;
-        background-position: center;
-        }
-
-    .nav__logo .logo {
-        position:absolute;
-        left: 50%;
-        transform: translate(-50%);
-        
-        top: -10px;      
-        width: 60%;
-        height: 250px;
-    }
-
-    .carte__menu {      
-        padding-top: 60px;
-        position: relative;
-       
-
-        .carte__menu--titre {
-            margin-bottom:100px; 
-            display: flex;
-            justify-content: center;
-            text-align: center;
-
-
-            & .fa-heart {          
-                    position: absolute;
-                    left: 60%;
-                    top: 20px;
-                    font-size: 2.0rem;           
-            }
-
-
-            & .far:hover {
-                font-size: 1.3;
-                color: #9c47fc;
-                display: block;
-                background: -webkit-linear-gradient($primaire, $secondaire );
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: bolder;
+        .carte__menu__box--iteme--texte {
+            min-width: 70%;
+            
+                & h3 {
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    padding-bottom: 5px;
                 }
 
+                & p {
+                    padding-left: 10px;
+                    padding-bottom: 10px;        
+                }
         }
 
 
-       .box__menu__btn .bouton__menu  {
-            font-size    : 2.0rem;
-            padding      : 15px 20px 15px 20px; 
-                  
-        }
+        .trans {
+            min-width: 30%;
+            display: flex;
+            
 
-    } 
+            .points {
+                background-color: #fff;
+                min-width: 25%;
+                position: relative;
+                height: 20px;
+                top: 29px;
+                left: 102%;
+                font-size: 1.2rem;
+                font-weight: bolder;
+                background-color: #fff;
+                padding-right: 80px;
+                
+                    @media screen and (min-width: 991px) { 
+                        top: 35px;
+                    }
+                }
+            
+
+            .carte__menu__box--iteme--prix {
+                background-color: #fff;
+                min-width: 25%;
+                position: relative;
+                height: 20px;
+                top: 35px; 
+                left: -40%;
+                font-size: 1.5rem;
+                font-weight: bolder;
+                animation: transi 0.70s ease-out;  
+                
+                    @media screen and (min-width: 630px) and (max-width: 991px){ 
+                        left: -80%;
+                    }
+
+                    @media screen and (min-width: 991px) { 
+                        top: 40px;
+                    }
+            }
 
 
+            .check {
+                background-color:$tertiaire;
+                min-width: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0px 10px 10px 0px;
+                color: #fff;
+                font-size: 1.2rem;
+                position: relative;
+                left: 52%;
+                animation: transi 0.70s ease-out;
+            }
 
-
-
-
-
-    .footer__menu {
-        position: fixed;
-        bottom: 0;
-    }
-
-
-    
-
+    }    
+        
 }
+
+
+
         
 
 
-
-
-/*** Apparition **************/
+/***Animation ************************************************************/
 .entrees_1,
 .plats_1,
 .desserts_1 {
@@ -837,8 +813,7 @@ margin-top: -30px;
 .carte__menu__box--iteme:hover .points {
     animation: petit_points 0.5s ease-in-out;
     animation-fill-mode: forwards;
-    
-    
+        
 }    
 
 @keyframes petit_points {
@@ -850,9 +825,44 @@ margin-top: -30px;
     to {
         opacity: 1;
         transform: translateX(-170%);
-        
+       
     }
 }
+
+
+@media screen and (min-width: 630px) and (max-width: 991px){ 
+
+    @keyframes petit_points {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-110%);
+           
+        }
+    }
+}
+
+@media screen and (min-width: 991px) { 
+
+    @keyframes petit_points {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-150%);
+           
+        }
+    }
+}
+
+
 
 
 .carte__menu__box--iteme:hover .carte__menu__box--iteme--prix {
@@ -871,6 +881,41 @@ margin-top: -30px;
         transform: translateX(-350%);
     }
 }
+
+@media screen and (min-width: 630px) and (max-width: 991px){ 
+
+    @keyframes prix {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-300%);
+        }
+    }
+}
+
+
+@media screen and (min-width: 991px) { 
+
+    @keyframes prix {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-250%);
+        }
+    }
+}
+
+
+
+
 
 
 .carte__menu__box--iteme:hover .check{
@@ -891,6 +936,46 @@ margin-top: -30px;
 }
 
 
+@media screen and (min-width: 630px) and (max-width: 991px){ 
+
+    @keyframes coche {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-235%);
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 991px) { 
+
+    @keyframes coche {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-180%);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 .carte__menu__box--iteme:hover .fa-check-circle{
     animation: rotation_1 0.8s ease-in-out;
@@ -908,22 +993,24 @@ margin-top: -30px;
 }
  
 
+.box__menu__btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 
+        .bouton__menu {
+            @include bouton;
+            @include couleur-btn;
+            padding-left: 30px;
+            padding-right: 30px;
 
-    .box__menu__btn {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
+                @media screen and (min-width: 630px) { 
+                    padding: 20px 40px 20px 40px ;
+                    font-size: 1.5rem;
+                }
 
-
-
-            .bouton__menu {
-                @include bouton;
-                @include couleur-btn;
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-    }
+        }
+}
 
 
 
