@@ -491,6 +491,7 @@ button:focus {
 }
 .box__fonctionnement__item:hover {
   background-color: #f2eafb;
+  -Webkit-background-color: #f2eafb;
 }
 .box__fonctionnement__item:hover .fa-mobile-alt,
 .box__fonctionnement__item:hover .fa-list-ul,

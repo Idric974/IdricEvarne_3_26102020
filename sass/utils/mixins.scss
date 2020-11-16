@@ -35,7 +35,8 @@
 
 
 @mixin bg-secondaire-claire ($colour:$primaire){
-    -webkit-background-color: lighten($colour, 35%);
+    background-color: lighten($colour, 35%);
+    -Webkit-background-color: lighten($colour, 35%);
 
         .fa-mobile-alt,
         .fa-list-ul,
