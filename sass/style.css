@@ -435,7 +435,7 @@ button:focus {
 .section__box__explorer .fa-map-marker-alt {
   position: absolute;
   display: block;
-  top: 75px;
+  top: 80px;
   left: 100px;
   z-index: 1;
 }
@@ -445,39 +445,33 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 50px;
   position: relative;
-  border: solid red 1px;
 }
 .section__box__explorer .box__explorer__palceholder .explorer {
-  align-items: center;
   background-color: #E2E2E2;
   width: 60%;
   height: 50px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  background-color: #d7d7fd;
 }
 .section__box__explorer .box__explorer__palceholder input::-webkit-input-placeholder {
   color: black;
-  padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input::-moz-placeholder {
   color: black;
-  padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input:-ms-input-placeholder {
   color: black;
-  padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input::-ms-input-placeholder {
   color: black;
-  padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input::placeholder {
   color: black;
-  z-index: 1;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input.explorer {
   font-weight: bolder;
@@ -595,7 +589,7 @@ button:focus {
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
   .section__box__explorer .fa-map-marker-alt {
-    top: 310px;
+    top: 315px;
     left: 35%;
     font-size: 1.3rem;
   }

@@ -299,7 +299,7 @@ height       : auto;
         .fa-map-marker-alt {
             position: absolute;
             display: block;
-            top: 75px;
+            top: 80px;
             left: 100px;
             z-index: 1;
         }
@@ -311,60 +311,47 @@ height       : auto;
             display         : flex;
             justify-content : center;
             align-items: center;
-            height          : 60px;
+            height          : 50px;
             position: relative;
-            border: solid red 1px;
+            
             
 
                 .explorer {
-                    align-items     : center;
                     background-color: $gris-fonce;
                     width           : 60%;
                     height: 50px;
                     display         : flex;
-                    flex-direction  : column;
+                    justify-content : center;
                     text-align      : center;
-                    background-color: rgb(215, 215, 253);
                     
-                    
-                                                        
+                                                                        
                 }
 
 
                 input::-webkit-input-placeholder {
-                    color:black;
-                    
-                    padding-bottom: 10px;  
-                                                
+                    color:black;                                                              
                 }
 
 
                 input::-moz-placeholder {
-                    color:black; 
-                    
-                    padding-bottom: 10px;                                  
+                    color:black;                                                                      
                 }
 
 
                 input:-ms-input-placeholder {
-                    color:black; 
-                    
-                    padding-bottom: 10px;                                  
+                    color:black;                                                                     
                 }
 
 
                 input::-ms-input-placeholder {
                     color:black;
-                    
-                    padding-bottom: 10px;                                   
-                }
+}
 
 
                 input::placeholder {
-                    color:black; 
-                    z-index: 1;
-                   
-                                                  
+                    color:black;
+                    padding-bottom: 10px;
+                    padding-top: 10px;                                                  
                 }
 
 
@@ -515,7 +502,7 @@ height       : auto;
 
 @media screen and (min-width: 630px) and (max-width: 991px){ 
     .section__box__explorer .fa-map-marker-alt {
-        top: 310px;
+        top: 315px;
         left: 35%;
         font-size: 1.3rem;
     }
