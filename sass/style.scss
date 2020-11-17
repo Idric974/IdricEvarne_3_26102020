@@ -34,10 +34,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: idric 3.0s ;
-    animation-fill-mode: forwards;
-    animation-delay: 3s; 
+    -webkit-animation: idric 3.0s ;
+            animation: idric 3.0s ;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s; 
     
+}
+ 
+@-webkit-keyframes idric{
+
+    0%  { opacity: 100%; }
+    10% { opacity: 95%; }
+    25% { opacity: 85%; }
+    30% { opacity: 80%; }
+    35% { opacity: 75%; }
+    40% { opacity: 70%; }
+    45% { opacity: 65%; }
+    50% { opacity: 60%; }
+    55% { opacity: 55%; }
+    60% { opacity: 50%; }
+    65% { opacity: 45%; }
+    70% { opacity: 40%; }
+    75% { opacity: 35%; }
+    80% { opacity: 30%; }
+    85% { opacity: 25%; }
+    90% { opacity: 20%; }
+    95% { opacity: 10%; }
+    100% { opacity: 0%; }
 }
  
 @keyframes idric{
@@ -91,25 +116,40 @@
     height: 13px;
     border-radius: 50%;
     @include couleur-btn;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
     
   } 
     .lds-ellipsis div:nth-child(1) {
         left: 8px;
-        animation: lds-ellipsis1 0.6s infinite;
+        -webkit-animation: lds-ellipsis1 0.6s infinite;
+                animation: lds-ellipsis1 0.6s infinite;
       }
       .lds-ellipsis div:nth-child(2) {
         left: 8px;
-        animation: lds-ellipsis2 0.6s infinite;
+        -webkit-animation: lds-ellipsis2 0.6s infinite;
+                animation: lds-ellipsis2 0.6s infinite;
       }
       .lds-ellipsis div:nth-child(3) {
         left: 32px;
-        animation: lds-ellipsis2 0.6s infinite;
+        -webkit-animation: lds-ellipsis2 0.6s infinite;
+                animation: lds-ellipsis2 0.6s infinite;
       }
       .lds-ellipsis div:nth-child(4) {
         left: 56px;
-        animation: lds-ellipsis3 0.6s infinite;
+        -webkit-animation: lds-ellipsis3 0.6s infinite;
+                animation: lds-ellipsis3 0.6s infinite;
       }
+
+
+  @-webkit-keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 
   @keyframes lds-ellipsis1 {
@@ -121,12 +161,30 @@
     }
   }
 
+  @-webkit-keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
   @keyframes lds-ellipsis3 {
     0% {
       transform: scale(1);
     }
     100% {
       transform: scale(0);
+    }
+  }
+
+  @-webkit-keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
     }
   }
 
@@ -273,6 +331,26 @@ height       : auto;
                 }
 
 
+                input::-webkit-input-placeholder {
+                    color:black;                                 
+                }
+
+
+                input::-moz-placeholder {
+                    color:black;                                 
+                }
+
+
+                input:-ms-input-placeholder {
+                    color:black;                                 
+                }
+
+
+                input::-ms-input-placeholder {
+                    color:black;                                 
+                }
+
+
                 input::placeholder {
                     color:black;                                 
                 }
@@ -380,6 +458,26 @@ height       : auto;
     }
 
     
+    input::-webkit-input-placeholder {      
+        font-size: 1.5rem;          
+    }
+
+    
+    input::-moz-placeholder {      
+        font-size: 1.5rem;          
+    }
+
+    
+    input:-ms-input-placeholder {      
+        font-size: 1.5rem;          
+    }
+
+    
+    input::-ms-input-placeholder {      
+        font-size: 1.5rem;          
+    }
+
+    
     input::placeholder {      
         font-size: 1.5rem;          
     }
@@ -408,6 +506,22 @@ height       : auto;
         font-size: 1.3rem;
     }
 
+    input::-webkit-input-placeholder {      
+        font-size: 1.4rem;          
+    }
+
+    input::-moz-placeholder {      
+        font-size: 1.4rem;          
+    }
+
+    input:-ms-input-placeholder {      
+        font-size: 1.4rem;          
+    }
+
+    input::-ms-input-placeholder {      
+        font-size: 1.4rem;          
+    }
+
     input::placeholder {      
         font-size: 1.4rem;          
     }
@@ -430,6 +544,8 @@ height       : auto;
 }      
     
 
+
+
 .box__fonctionnement__item {
     background-color: $gris-claire;
     align-items     : center;
@@ -445,13 +561,8 @@ height       : auto;
     @include box-shadow-choix;
     cursor: pointer;
 
-        &:hover  {
-            @include box-shadow-choix_2;      
-        }
-
-    
-        &:hover  {
-            @include bg-secondaire-claire;          
+        &:hover {
+        @include bg-secondaire-claire;
         }
 
 
@@ -459,7 +570,7 @@ height       : auto;
         .fa-list-ul,
         .fa-store {
             margin-right: 20px;
-            color       : #7e7e7e;                   
+            color       : #7e7e7e;           
         }
 
 
@@ -855,7 +966,8 @@ margin-top: -30px;
     cursor: pointer;
     background-color: #fff;
     position: relative;
-    animation: selection  0.2s ease-in-out;
+    -webkit-animation: selection  0.2s ease-in-out;
+            animation: selection  0.2s ease-in-out;
     overflow: hidden;
 
         @media screen and (min-width: 630px) and (max-width: 991px){ 
@@ -913,7 +1025,8 @@ margin-top: -30px;
                 left: -40%;
                 font-size: 1.5rem;
                 font-weight: bolder;
-                animation: transi 0.70s ease-out;  
+                -webkit-animation: transi 0.70s ease-out;
+                        animation: transi 0.70s ease-out;  
                 
                     @media screen and (min-width: 630px) and (max-width: 991px){ 
                         left: -80%;
@@ -936,7 +1049,8 @@ margin-top: -30px;
                 font-size: 1.2rem;
                 position: relative;
                 left: 52%;
-                animation: transi 0.70s ease-out;
+                -webkit-animation: transi 0.70s ease-out;
+                        animation: transi 0.70s ease-out;
             }
 
     }    
@@ -952,26 +1066,44 @@ margin-top: -30px;
 .entrees_1,
 .plats_1,
 .desserts_1 {
-    animation: apparition 1.000s ease-out;
+    -webkit-animation: apparition 1.000s ease-out;
+            animation: apparition 1.000s ease-out;
 }
 
 .entrees_2,
 .plats_2,
 .desserts_2 {
-    animation: apparition 0.90s ease-out;
+    -webkit-animation: apparition 0.90s ease-out;
+            animation: apparition 0.90s ease-out;
 }
 
 .entrees_3,
 .plats_3,
 .desserts_3 {
-    animation: apparition 0.80s ease-out;
+    -webkit-animation: apparition 0.80s ease-out;
+            animation: apparition 0.80s ease-out;
 }
 
 
 .entrees_4,
 .plats_4,
 .desserts_4 {
-    animation: apparition 0.10s ease-out;
+    -webkit-animation: apparition 0.10s ease-out;
+            animation: apparition 0.10s ease-out;
+}
+
+
+@-webkit-keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 
@@ -993,9 +1125,24 @@ margin-top: -30px;
 
 /**Translation *******************/
 .carte__menu__box--iteme:hover .points {
-    animation: petit_points 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+    -webkit-animation: petit_points 0.5s ease-in-out;
+            animation: petit_points 0.5s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
         
+}    
+
+@-webkit-keyframes petit_points {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-170%);
+       
+    }
 }    
 
 @keyframes petit_points {
@@ -1014,6 +1161,19 @@ margin-top: -30px;
 
 @media screen and (min-width: 630px) and (max-width: 991px){ 
 
+    @-webkit-keyframes petit_points {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-110%);
+           
+        }
+    } 
+
     @keyframes petit_points {
         from {
             opacity: 0;
@@ -1029,6 +1189,19 @@ margin-top: -30px;
 }
 
 @media screen and (min-width: 991px) { 
+
+    @-webkit-keyframes petit_points {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-150%);
+           
+        }
+    } 
 
     @keyframes petit_points {
         from {
@@ -1048,8 +1221,22 @@ margin-top: -30px;
 
 
 .carte__menu__box--iteme:hover .carte__menu__box--iteme--prix {
-    animation: prix 0.4s ease-in-out;
-    animation-fill-mode: forwards;
+    -webkit-animation: prix 0.4s ease-in-out;
+            animation: prix 0.4s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}    
+
+@-webkit-keyframes prix {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-350%);
+    }
 }    
 
 @keyframes prix {
@@ -1066,6 +1253,18 @@ margin-top: -30px;
 
 @media screen and (min-width: 630px) and (max-width: 991px){ 
 
+    @-webkit-keyframes prix {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-300%);
+        }
+    } 
+
     @keyframes prix {
         from {
             opacity: 0;
@@ -1081,6 +1280,18 @@ margin-top: -30px;
 
 
 @media screen and (min-width: 991px) { 
+
+    @-webkit-keyframes prix {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-250%);
+        }
+    } 
 
     @keyframes prix {
         from {
@@ -1101,8 +1312,22 @@ margin-top: -30px;
 
 
 .carte__menu__box--iteme:hover .check{
-    animation: coche 0.3s ease-in-out;
-    animation-fill-mode: both;
+    -webkit-animation: coche 0.3s ease-in-out;
+            animation: coche 0.3s ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}    
+
+@-webkit-keyframes coche {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-188%);
+    }
 }    
 
 @keyframes coche {
@@ -1120,6 +1345,18 @@ margin-top: -30px;
 
 @media screen and (min-width: 630px) and (max-width: 991px){ 
 
+    @-webkit-keyframes coche {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-235%);
+        }
+    } 
+
     @keyframes coche {
         from {
             opacity: 0;
@@ -1136,6 +1373,18 @@ margin-top: -30px;
 
 
 @media screen and (min-width: 991px) { 
+
+    @-webkit-keyframes coche {
+        from {
+            opacity: 0;
+            transform: translateX(0%);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateX(-180%);
+        }
+    } 
 
     @keyframes coche {
         from {
@@ -1160,8 +1409,20 @@ margin-top: -30px;
 
 
 .carte__menu__box--iteme:hover .fa-check-circle{
-    animation: rotation_1 0.8s ease-in-out;
-    animation-fill-mode: both;
+    -webkit-animation: rotation_1 0.8s ease-in-out;
+            animation: rotation_1 0.8s ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}   
+
+
+@-webkit-keyframes rotation_1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }   
 
 

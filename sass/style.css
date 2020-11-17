@@ -130,11 +130,70 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-animation: idric 3s;
   animation: idric 3s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 3s;
   animation-delay: 3s;
 }
 
+@-webkit-keyframes idric {
+  0% {
+    opacity: 100%;
+  }
+  10% {
+    opacity: 95%;
+  }
+  25% {
+    opacity: 85%;
+  }
+  30% {
+    opacity: 80%;
+  }
+  35% {
+    opacity: 75%;
+  }
+  40% {
+    opacity: 70%;
+  }
+  45% {
+    opacity: 65%;
+  }
+  50% {
+    opacity: 60%;
+  }
+  55% {
+    opacity: 55%;
+  }
+  60% {
+    opacity: 50%;
+  }
+  65% {
+    opacity: 45%;
+  }
+  70% {
+    opacity: 40%;
+  }
+  75% {
+    opacity: 35%;
+  }
+  80% {
+    opacity: 30%;
+  }
+  85% {
+    opacity: 25%;
+  }
+  90% {
+    opacity: 20%;
+  }
+  95% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
 @keyframes idric {
   0% {
     opacity: 100%;
@@ -213,6 +272,7 @@ button:focus {
   height: 13px;
   border-radius: 50%;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:hover {
@@ -222,24 +282,36 @@ button:focus {
 
 .lds-ellipsis div:nth-child(1) {
   left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
   animation: lds-ellipsis1 0.6s infinite;
 }
 
 .lds-ellipsis div:nth-child(2) {
   left: 8px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
   animation: lds-ellipsis2 0.6s infinite;
 }
 
 .lds-ellipsis div:nth-child(3) {
   left: 32px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
   animation: lds-ellipsis2 0.6s infinite;
 }
 
 .lds-ellipsis div:nth-child(4) {
   left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
   animation: lds-ellipsis3 0.6s infinite;
 }
 
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes lds-ellipsis1 {
   0% {
     transform: scale(0);
@@ -248,12 +320,28 @@ button:focus {
     transform: scale(1);
   }
 }
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(0);
+  }
+}
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
   }
 }
 @keyframes lds-ellipsis2 {
@@ -367,6 +455,18 @@ button:focus {
   flex-direction: column;
   text-align: center;
 }
+.section__box__explorer .box__explorer__palceholder input::-webkit-input-placeholder {
+  color: black;
+}
+.section__box__explorer .box__explorer__palceholder input::-moz-placeholder {
+  color: black;
+}
+.section__box__explorer .box__explorer__palceholder input:-ms-input-placeholder {
+  color: black;
+}
+.section__box__explorer .box__explorer__palceholder input::-ms-input-placeholder {
+  color: black;
+}
 .section__box__explorer .box__explorer__palceholder input::placeholder {
   color: black;
 }
@@ -454,6 +554,22 @@ button:focus {
     cursor: pointer;
   }
 
+  input::-webkit-input-placeholder {
+    font-size: 1.5rem;
+  }
+
+  input::-moz-placeholder {
+    font-size: 1.5rem;
+  }
+
+  input:-ms-input-placeholder {
+    font-size: 1.5rem;
+  }
+
+  input::-ms-input-placeholder {
+    font-size: 1.5rem;
+  }
+
   input::placeholder {
     font-size: 1.5rem;
   }
@@ -473,6 +589,22 @@ button:focus {
     top: 310px;
     left: 35%;
     font-size: 1.3rem;
+  }
+
+  input::-webkit-input-placeholder {
+    font-size: 1.4rem;
+  }
+
+  input::-moz-placeholder {
+    font-size: 1.4rem;
+  }
+
+  input:-ms-input-placeholder {
+    font-size: 1.4rem;
+  }
+
+  input::-ms-input-placeholder {
+    font-size: 1.4rem;
   }
 
   input::placeholder {
@@ -504,9 +636,6 @@ button:focus {
   position: relative;
   box-shadow: 3px 3px 10px 1px #b6b5b5;
   cursor: pointer;
-}
-.box__fonctionnement__item:hover {
-  box-shadow: 4px 4px 10px 1px #818181;
 }
 .box__fonctionnement__item:hover {
   background-color: #f2eafb;
@@ -986,6 +1115,7 @@ button:focus {
   cursor: pointer;
   background-color: #fff;
   position: relative;
+  -webkit-animation: selection 0.2s ease-in-out;
   animation: selection 0.2s ease-in-out;
   overflow: hidden;
 }
@@ -1036,6 +1166,7 @@ button:focus {
   left: -40%;
   font-size: 1.5rem;
   font-weight: bolder;
+  -webkit-animation: transi 0.7s ease-out;
   animation: transi 0.7s ease-out;
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
@@ -1059,6 +1190,7 @@ button:focus {
   font-size: 1.2rem;
   position: relative;
   left: 52%;
+  -webkit-animation: transi 0.7s ease-out;
   animation: transi 0.7s ease-out;
 }
 
@@ -1066,27 +1198,41 @@ button:focus {
 .entrees_1,
 .plats_1,
 .desserts_1 {
+  -webkit-animation: apparition 1s ease-out;
   animation: apparition 1s ease-out;
 }
 
 .entrees_2,
 .plats_2,
 .desserts_2 {
+  -webkit-animation: apparition 0.9s ease-out;
   animation: apparition 0.9s ease-out;
 }
 
 .entrees_3,
 .plats_3,
 .desserts_3 {
+  -webkit-animation: apparition 0.8s ease-out;
   animation: apparition 0.8s ease-out;
 }
 
 .entrees_4,
 .plats_4,
 .desserts_4 {
+  -webkit-animation: apparition 0.1s ease-out;
   animation: apparition 0.1s ease-out;
 }
 
+@-webkit-keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @keyframes apparition {
   from {
     opacity: 0;
@@ -1100,10 +1246,22 @@ button:focus {
 /*** Apparition **************/
 /**Translation *******************/
 .carte__menu__box--iteme:hover .points {
+  -webkit-animation: petit_points 0.5s ease-in-out;
   animation: petit_points 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes petit_points {
+  from {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-170%);
+  }
+}
 @keyframes petit_points {
   from {
     opacity: 0;
@@ -1115,6 +1273,16 @@ button:focus {
   }
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
+  @-webkit-keyframes petit_points {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-110%);
+    }
+  }
   @keyframes petit_points {
     from {
       opacity: 0;
@@ -1127,6 +1295,16 @@ button:focus {
   }
 }
 @media screen and (min-width: 991px) {
+  @-webkit-keyframes petit_points {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-150%);
+    }
+  }
   @keyframes petit_points {
     from {
       opacity: 0;
@@ -1139,10 +1317,22 @@ button:focus {
   }
 }
 .carte__menu__box--iteme:hover .carte__menu__box--iteme--prix {
+  -webkit-animation: prix 0.4s ease-in-out;
   animation: prix 0.4s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes prix {
+  from {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-350%);
+  }
+}
 @keyframes prix {
   from {
     opacity: 0;
@@ -1154,6 +1344,16 @@ button:focus {
   }
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
+  @-webkit-keyframes prix {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-300%);
+    }
+  }
   @keyframes prix {
     from {
       opacity: 0;
@@ -1166,6 +1366,16 @@ button:focus {
   }
 }
 @media screen and (min-width: 991px) {
+  @-webkit-keyframes prix {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-250%);
+    }
+  }
   @keyframes prix {
     from {
       opacity: 0;
@@ -1178,10 +1388,22 @@ button:focus {
   }
 }
 .carte__menu__box--iteme:hover .check {
+  -webkit-animation: coche 0.3s ease-in-out;
   animation: coche 0.3s ease-in-out;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
+@-webkit-keyframes coche {
+  from {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-188%);
+  }
+}
 @keyframes coche {
   from {
     opacity: 0;
@@ -1193,6 +1415,16 @@ button:focus {
   }
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
+  @-webkit-keyframes coche {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-235%);
+    }
+  }
   @keyframes coche {
     from {
       opacity: 0;
@@ -1205,6 +1437,16 @@ button:focus {
   }
 }
 @media screen and (min-width: 991px) {
+  @-webkit-keyframes coche {
+    from {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-180%);
+    }
+  }
   @keyframes coche {
     from {
       opacity: 0;
@@ -1217,10 +1459,20 @@ button:focus {
   }
 }
 .carte__menu__box--iteme:hover .fa-check-circle {
+  -webkit-animation: rotation_1 0.8s ease-in-out;
   animation: rotation_1 0.8s ease-in-out;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
+@-webkit-keyframes rotation_1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotation_1 {
   from {
     transform: rotate(0deg);
