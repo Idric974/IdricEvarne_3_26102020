@@ -457,27 +457,22 @@ button:focus {
 }
 .section__box__explorer .box__explorer__palceholder input::-webkit-input-placeholder {
   color: black;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input::-moz-placeholder {
   color: black;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input:-ms-input-placeholder {
   color: black;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input::-ms-input-placeholder {
   color: black;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input::placeholder {
   color: black;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 .section__box__explorer .box__explorer__palceholder input.explorer {
