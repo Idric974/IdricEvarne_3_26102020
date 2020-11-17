@@ -445,7 +445,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 63px;
   position: relative;
 }
 .section__box__explorer .box__explorer__palceholder .explorer {
