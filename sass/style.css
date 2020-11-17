@@ -115,7 +115,7 @@ button:focus {
   width: 100%;
   font-family: "shrikhandregular";
   font-size: 3.2rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   overflow: hidden;
 }
 
@@ -129,7 +129,7 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: idric 5s;
+  animation: idric 3s;
   animation-fill-mode: forwards;
   animation-delay: 3s;
 }
@@ -268,7 +268,20 @@ button:focus {
   display: none;
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 630px) and (max-width: 991px) {
+  .img_header {
+    background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 10px 1px #b6b5b5;
+    display: block;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .img_header {
     background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-position: center;
@@ -306,7 +319,7 @@ button:focus {
     transform: translate(-50%);
     top: 10px;
     width: 80%;
-    height: 90px;
+    height: 100px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -329,9 +342,6 @@ button:focus {
   flex-direction: column;
   align-items: center;
   padding-bottom: 40px;
-}
-.section__box__explorer:hover .fa-map-marker-alt {
-  display: none;
 }
 .section__box__explorer .fa-map-marker-alt {
   position: absolute;
@@ -440,6 +450,7 @@ button:focus {
   .section__box__explorer .box__explorer__palceholder .explorer {
     background-color: #fff;
     padding-top: 10px;
+    cursor: pointer;
   }
 
   input::placeholder {
@@ -458,7 +469,7 @@ button:focus {
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
   .section__box__explorer .fa-map-marker-alt {
-    top: 40%;
+    top: 30%;
     left: 39%;
     font-size: 1.3rem;
   }
@@ -488,6 +499,9 @@ button:focus {
   position: relative;
   box-shadow: 3px 3px 10px 1px #b6b5b5;
   cursor: pointer;
+}
+.box__fonctionnement__item:hover {
+  box-shadow: 4px 4px 10px 1px #818181;
 }
 .box__fonctionnement__item:hover {
   background-color: #f2eafb;
@@ -1062,7 +1076,7 @@ button:focus {
 .entrees_4,
 .plats_4,
 .desserts_4 {
-  animation: apparition 0.06s ease-out;
+  animation: apparition 0.1s ease-out;
 }
 
 @keyframes apparition {
@@ -1235,12 +1249,17 @@ button:focus {
 }
 .box__menu__btn .bouton__menu:hover {
   box-shadow: 3px 3px 10px 1px #b6b5b5;
-  padding: 21px 41px 21px 41px;
 }
 @media screen and (min-width: 630px) {
   .box__menu__btn .bouton__menu {
     padding: 20px 40px 20px 40px;
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  .box__menu__btn .bouton__menu:hover {
+    box-shadow: 3px 3px 10px 1px #b6b5b5;
+    padding: 21px 41px 21px 41px;
   }
 }
 

@@ -27,6 +27,13 @@
 
 }
 
+@mixin box-shadow-choix_2 {
+    box-shadow: 4px 4px 10px 1px rgb(129, 129, 129);
+
+}
+
+
+
 @mixin bouton_1 {
     box-shadow: 3px 3px 10px 1px rgb(182, 181, 181);
 
@@ -37,6 +44,7 @@
 @mixin bg-secondaire-claire ($colour:$primaire){
     background-color: lighten($colour, 35%);
     -Webkit-background-color: lighten($colour, 35%);
+    
 
         .fa-mobile-alt,
         .fa-list-ul,
