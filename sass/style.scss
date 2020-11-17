@@ -324,6 +324,7 @@ height       : auto;
                     align-items     : center;
                     background-color: $gris-fonce;
                     width           : 60%;
+                    height: 30px;
                     display         : flex;
                     flex-direction  : column;
                     text-align      : center;
@@ -363,8 +364,9 @@ height       : auto;
 
                 input::placeholder {
                     color:black; 
-                    
-                    padding-bottom: 10px;                                  
+                    z-index: 1;
+                   
+                                                  
                 }
 
 
@@ -373,7 +375,8 @@ height       : auto;
                     border     : none;  
                     font-family: 'Roboto', sans-serif; 
                     font-size: 1.0rem; 
-                    font-weight: lighter; 
+                    font-weight: lighter;
+
                    
                                      
                 }
