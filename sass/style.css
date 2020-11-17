@@ -444,17 +444,20 @@ button:focus {
   background-color: #E2E2E2;
   display: flex;
   justify-content: center;
-  height: 40px;
+  align-items: center;
+  height: 60px;
   position: relative;
+  border: solid red 1px;
 }
 .section__box__explorer .box__explorer__palceholder .explorer {
   align-items: center;
   background-color: #E2E2E2;
   width: 60%;
-  height: 30px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: #d7d7fd;
 }
 .section__box__explorer .box__explorer__palceholder input::-webkit-input-placeholder {
   color: black;
