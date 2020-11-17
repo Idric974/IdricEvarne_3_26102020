@@ -470,8 +470,8 @@ button:focus {
 }
 .section__box__explorer .box__explorer__palceholder input::placeholder {
   color: black;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 .section__box__explorer .box__explorer__palceholder input.explorer {
   font-weight: bolder;
