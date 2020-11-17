@@ -15,10 +15,11 @@
 .ohmyfood h2{
     color: #fff;
     width: 100%;
+    padding-top: 10px;
     font-family: 'shrikhandregular';
     font-size: 3.2rem;
     letter-spacing: 3px;
-    overflow: hidden;
+    overflow: hidden;  
 }
 
 
@@ -342,6 +343,7 @@ height       : auto;
         width: 100%;
     }
 
+
     .section__box__explorer,
     .section__box__fonctionnement {
         width: 100%;
@@ -356,8 +358,6 @@ height       : auto;
     }
 
 
-
-
     .section__box__explorer .box__explorer__palceholder {
         position: absolute;
         top: 300px;
@@ -367,13 +367,6 @@ height       : auto;
         height: 80px;
         border-radius: 10px;
         background-color: #fff;
-
-
-
-        
-        
-
-
 
 
             .explorer {
@@ -388,10 +381,7 @@ height       : auto;
 
     
     input::placeholder {      
-        font-size: 1.5rem;
-        
-
-        
+        font-size: 1.5rem;          
     }
 
 
@@ -413,9 +403,13 @@ height       : auto;
 
 @media screen and (min-width: 630px) and (max-width: 991px){ 
     .section__box__explorer .fa-map-marker-alt {
-        top: 30%;
-        left: 39%;
+        top: 310px;
+        left: 35%;
         font-size: 1.3rem;
+    }
+
+    input::placeholder {      
+        font-size: 1.4rem;          
     }
 
 
@@ -803,6 +797,10 @@ height       : auto;
     position:absolute;
     top: 20px;
     left: 20px;
+
+        &:hover {
+            color:#fff;
+        }
 
 
         @media screen and (min-width: 630px) and (max-width: 991px){ 

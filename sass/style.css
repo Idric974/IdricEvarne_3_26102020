@@ -113,6 +113,7 @@ button:focus {
 .ohmyfood h2 {
   color: #fff;
   width: 100%;
+  padding-top: 10px;
   font-family: "shrikhandregular";
   font-size: 3.2rem;
   letter-spacing: 3px;
@@ -469,9 +470,13 @@ button:focus {
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
   .section__box__explorer .fa-map-marker-alt {
-    top: 30%;
-    left: 39%;
+    top: 310px;
+    left: 35%;
     font-size: 1.3rem;
+  }
+
+  input::placeholder {
+    font-size: 1.4rem;
   }
 }
 /**Section Box Fonctionnement**********************************/
@@ -847,6 +852,9 @@ button:focus {
   position: absolute;
   top: 20px;
   left: 20px;
+}
+.fa-arrow-left:hover {
+  color: #fff;
 }
 @media screen and (min-width: 630px) and (max-width: 991px) {
   .fa-arrow-left {
