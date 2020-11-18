@@ -562,7 +562,7 @@ height       : auto;
     @include box-shadow-choix;
     cursor: pointer;
 
-        &:active {
+        &:hover {
         @include bg-secondaire-claire;
         }
 

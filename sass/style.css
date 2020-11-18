@@ -640,13 +640,13 @@ button:focus {
   box-shadow: 3px 3px 10px 1px #b6b5b5;
   cursor: pointer;
 }
-.box__fonctionnement__item:active {
+.box__fonctionnement__item:hover {
   background-color: #f2eafb;
   -Webkit-background-color: #f2eafb;
 }
-.box__fonctionnement__item:active .fa-mobile-alt,
-.box__fonctionnement__item:active .fa-list-ul,
-.box__fonctionnement__item:active .fa-store {
+.box__fonctionnement__item:hover .fa-mobile-alt,
+.box__fonctionnement__item:hover .fa-list-ul,
+.box__fonctionnement__item:hover .fa-store {
   color: #9356DC;
 }
 .box__fonctionnement__item .fa-mobile-alt,
