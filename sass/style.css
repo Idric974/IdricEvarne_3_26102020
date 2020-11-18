@@ -640,13 +640,13 @@ button:focus {
   box-shadow: 3px 3px 10px 1px #b6b5b5;
   cursor: pointer;
 }
-.box__fonctionnement__item:hover {
+.box__fonctionnement__item:active {
   background-color: #f2eafb;
   -Webkit-background-color: #f2eafb;
 }
-.box__fonctionnement__item:hover .fa-mobile-alt,
-.box__fonctionnement__item:hover .fa-list-ul,
-.box__fonctionnement__item:hover .fa-store {
+.box__fonctionnement__item:active .fa-mobile-alt,
+.box__fonctionnement__item:active .fa-list-ul,
+.box__fonctionnement__item:active .fa-store {
   color: #9356DC;
 }
 .box__fonctionnement__item .fa-mobile-alt,
@@ -1199,28 +1199,28 @@ button:focus {
 
 /***Animation ************************************************************/
 .entrees_1,
-.plats_1,
+.pltas_1,
 .desserts_1 {
   -webkit-animation: apparition 1s ease-out;
   animation: apparition 1s ease-out;
 }
 
 .entrees_2,
-.plats_2,
+.pltas_2,
 .desserts_2 {
   -webkit-animation: apparition 0.9s ease-out;
   animation: apparition 0.9s ease-out;
 }
 
 .entrees_3,
-.plats_3,
+.pltas_3,
 .desserts_3 {
   -webkit-animation: apparition 0.8s ease-out;
   animation: apparition 0.8s ease-out;
 }
 
 .entrees_4,
-.plats_4,
+.pltas_4,
 .desserts_4 {
   -webkit-animation: apparition 0.1s ease-out;
   animation: apparition 0.1s ease-out;
