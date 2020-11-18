@@ -1222,8 +1222,8 @@ button:focus {
 .entrees_4,
 .plats_4,
 .desserts_4 {
-  -webkit-animation: apparition 0.1s ease-out;
-  animation: apparition 0.1s ease-out;
+  -webkit-animation: apparition 0.7s ease-out;
+  animation: apparition 0.7s ease-out;
 }
 
 @-webkit-keyframes apparition {
