@@ -207,7 +207,7 @@
 }
 
 .img_header {
-    @media screen and (min-width: 739px) and (max-width: 991px){ 
+    @media screen and (min-width: 742px) and (max-width: 991px){ 
             background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
             background-position: center;
             background-repeat: no-repeat;
@@ -257,7 +257,7 @@ height       : auto;
         cursor             : pointer;
 
 
-            @media screen and (min-width: 739px) and (max-width: 991px){ 
+            @media screen and (min-width: 742px) and (max-width: 991px){ 
                 position: absolute;
                 left: 50%;
                 transform: translate(-50%);
@@ -500,7 +500,7 @@ height       : auto;
 }
 
 
-@media screen and (min-width: 739px) and (max-width: 991px){ 
+@media screen and (min-width: 742px) and (max-width: 991px){ 
     .section__box__explorer .fa-map-marker-alt {
         top: 315px;
         left: 35%;
@@ -655,7 +655,7 @@ height       : auto;
                 width              : 100%;
                 height             : 175px;
 
-                    @media screen and (min-width: 739px) {           
+                    @media screen and (min-width: 742px) {           
                         height             : 300px;
                     }
             }
@@ -667,7 +667,7 @@ height       : auto;
                 width              : 100%;
                 height             : 175px;
 
-                    @media screen and (min-width: 739px) {           
+                    @media screen and (min-width: 742px) {           
                         height             : 300px;
                     }
             }
@@ -679,7 +679,7 @@ height       : auto;
                 width              : 100%;
                 height             : 175px;
 
-                    @media screen and (min-width: 739px) {           
+                    @media screen and (min-width: 742px) {           
                         height             : 300px;
                     }
             }
@@ -691,7 +691,7 @@ height       : auto;
                 width              : 100%;
                 height             : 175px;
 
-                    @media screen and (min-width: 739px) {           
+                    @media screen and (min-width: 742px) {           
                         height: 300px;
                     }
             }
@@ -711,7 +711,7 @@ height       : auto;
                 -webkit-text-fill-color: transparent;
                 font-weight: bolder;
                 transition: all 1.5s linear 0s;
-                @media screen and (min-width: 739px) {
+                @media screen and (min-width: 742px) {
                     font-size: 2.0rem;       
                 }
                 }
@@ -725,7 +725,7 @@ height       : auto;
                 left       : 80%;
                 color: black;
 
-                    @media screen and (min-width: 739px) {
+                    @media screen and (min-width: 742px) {
                         top: 320px; 
                         left: 90%; 
                         font-size: 2.0rem;       
@@ -915,7 +915,7 @@ height       : auto;
         }
 
 
-        @media screen and (min-width: 739px) and (max-width: 991px){ 
+        @media screen and (min-width: 742px) and (max-width: 991px){ 
             top: 40px;
             left: 50px;
             font-size: 2.5rem;
@@ -931,7 +931,7 @@ height       : auto;
 
 .tablette_pc_carte {
 
-        @media screen and (min-width: 739px) { 
+        @media screen and (min-width: 742px) { 
             display: flex;
             justify-content: space-around;
             width: 100%;
@@ -947,7 +947,7 @@ margin-top: -30px;
 .carte__menu__box {
     @include carte__menu__box; 
 
-        @media screen and (min-width: 739px) and (max-width: 991px){ 
+        @media screen and (min-width: 742px) and (max-width: 991px){ 
             padding-left: 10px;
             padding-right: 10px;
 
@@ -971,7 +971,7 @@ margin-top: -30px;
             animation: selection  0.2s ease-in-out;
     overflow: hidden;
 
-        @media screen and (min-width: 739px) and (max-width: 991px){ 
+        @media screen and (min-width: 742px) and (max-width: 991px){ 
             width: 235px;
 
         }
@@ -1029,7 +1029,7 @@ margin-top: -30px;
                 -webkit-animation: transi 0.70s ease-out;
                         animation: transi 0.70s ease-out;  
                 
-                    @media screen and (min-width: 739px) and (max-width: 991px){ 
+                    @media screen and (min-width: 742px) and (max-width: 991px){ 
                         left: -80%;
                     }
 
@@ -1162,7 +1162,7 @@ margin-top: -30px;
 }
 
 
-@media screen and (min-width: 739px) and (max-width: 991px){ 
+@media screen and (min-width: 742px) and (max-width: 991px){ 
 
     @-webkit-keyframes petit_points {
         from {
@@ -1254,7 +1254,7 @@ margin-top: -30px;
     }
 }
 
-@media screen and (min-width: 739px) and (max-width: 991px){ 
+@media screen and (min-width: 742px) and (max-width: 991px){ 
 
     @-webkit-keyframes prix {
         from {
@@ -1346,7 +1346,7 @@ margin-top: -30px;
 }
 
 
-@media screen and (min-width: 739px) and (max-width: 991px){ 
+@media screen and (min-width: 742px) and (max-width: 991px){ 
 
     @-webkit-keyframes coche {
         from {
@@ -1457,7 +1457,7 @@ margin-top: -30px;
                     
                 } 
 
-                @media screen and (min-width: 739px) { 
+                @media screen and (min-width: 742px) { 
                     padding: 20px 40px 20px 40px ;
                     font-size: 1.5rem;
                 }

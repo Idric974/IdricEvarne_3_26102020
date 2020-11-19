@@ -357,7 +357,7 @@ button:focus {
   display: none;
 }
 
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   .img_header {
     background-image: url(../image/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-position: center;
@@ -401,7 +401,7 @@ button:focus {
   height: 60px;
   cursor: pointer;
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   .nav__logo .logo {
     position: absolute;
     left: 50%;
@@ -587,7 +587,7 @@ button:focus {
     font-size: 1.3rem;
   }
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   .section__box__explorer .fa-map-marker-alt {
     top: 315px;
     left: 35%;
@@ -720,7 +720,7 @@ button:focus {
   width: 100%;
   height: 175px;
 }
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .section__box__restaurant .box__restaurant_carte .box__restaurant__image_1 {
     height: 300px;
   }
@@ -735,7 +735,7 @@ button:focus {
   width: 100%;
   height: 175px;
 }
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .section__box__restaurant .box__restaurant_carte .box__restaurant__image_2 {
     height: 300px;
   }
@@ -750,7 +750,7 @@ button:focus {
   width: 100%;
   height: 175px;
 }
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .section__box__restaurant .box__restaurant_carte .box__restaurant__image_3 {
     height: 300px;
   }
@@ -765,7 +765,7 @@ button:focus {
   width: 100%;
   height: 175px;
 }
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .section__box__restaurant .box__restaurant_carte .box__restaurant__image_4 {
     height: 300px;
   }
@@ -782,7 +782,7 @@ button:focus {
   font-weight: bolder;
   transition: all 1.5s linear 0s;
 }
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .section__box__restaurant .box__restaurant_carte .far:hover {
     font-size: 2rem;
   }
@@ -795,7 +795,7 @@ button:focus {
   left: 80%;
   color: black;
 }
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .section__box__restaurant .box__restaurant_carte .fa-heart {
     top: 320px;
     left: 90%;
@@ -988,7 +988,7 @@ button:focus {
 .fa-arrow-left:hover {
   color: #fff;
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   .fa-arrow-left {
     top: 40px;
     left: 50px;
@@ -1003,7 +1003,7 @@ button:focus {
   }
 }
 
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .tablette_pc_carte {
     display: flex;
     justify-content: space-around;
@@ -1100,7 +1100,7 @@ button:focus {
   top: 22px;
   left: 4px;
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   .carte__menu__box {
     padding-left: 10px;
     padding-right: 10px;
@@ -1122,7 +1122,7 @@ button:focus {
   animation: selection 0.2s ease-in-out;
   overflow: hidden;
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   .carte__menu__box--iteme {
     width: 235px;
   }
@@ -1172,7 +1172,7 @@ button:focus {
   -webkit-animation: transi 0.7s ease-out;
   animation: transi 0.7s ease-out;
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   .carte__menu__box--iteme .trans .carte__menu__box--iteme--prix {
     left: -80%;
   }
@@ -1275,7 +1275,7 @@ button:focus {
     transform: translateX(-170%);
   }
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   @-webkit-keyframes petit_points {
     from {
       opacity: 0;
@@ -1346,7 +1346,7 @@ button:focus {
     transform: translateX(-350%);
   }
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   @-webkit-keyframes prix {
     from {
       opacity: 0;
@@ -1417,7 +1417,7 @@ button:focus {
     transform: translateX(-188%);
   }
 }
-@media screen and (min-width: 739px) and (max-width: 991px) {
+@media screen and (min-width: 742px) and (max-width: 991px) {
   @-webkit-keyframes coche {
     from {
       opacity: 0;
@@ -1513,7 +1513,7 @@ button:focus {
 .box__menu__btn .bouton__menu:hover {
   box-shadow: 3px 3px 10px 1px #b6b5b5;
 }
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 742px) {
   .box__menu__btn .bouton__menu {
     padding: 20px 40px 20px 40px;
     font-size: 1.5rem;
